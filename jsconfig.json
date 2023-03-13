@@ -1,0 +1,6 @@
+// 告诉插件这是什么版本的vue
+{
+    "vueCompilerOptions": {
+        "target": 2.7
+    }
+}
