@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="">1</div>
+    <div class="">乡村发展页</div>
   </div>
 </template>
 

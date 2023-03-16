@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import Industrial from '../views/Industrial_development.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +11,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Industrial',
+    name: 'Industrial',
+    component: Industrial
   },
   // {
   //   path: '/about',
