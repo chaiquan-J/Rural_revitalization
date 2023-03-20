@@ -18,10 +18,10 @@
           <router-link class="link_btn" to="/">乡村文化</router-link>
         </nav>
         <nav class="router_item">
-          <router-link class="link_btn" to="/">振兴政策</router-link>
+          <router-link class="link_btn" to="/">人才引进</router-link>
         </nav>
         <nav class="router_item">
-          <router-link class="link_btn" to="/">人才引进</router-link>
+          <router-link class="link_btn" to="/">振兴政策</router-link>
         </nav>
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
 
     .router_item {
       height: 100%;
-      width: 100px;
+      width: 120px;
       background-color: #06b54f;
       line-height: 70px;
       text-align: center;
