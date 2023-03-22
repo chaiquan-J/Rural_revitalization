@@ -4,24 +4,30 @@
     <div class="nav_bar">
       <!-- logo -->
       <div class="logo_box">
-        <h1>这是logo</h1>
+        <h1>崇左</h1>
+        <h1>之窗</h1>
       </div>
       <!-- 导航 -->
       <div class="router_box">
         <nav class="router_item">
-          <router-link class="link_btn" to="/">首页</router-link>
+          <router-link class="link_btn" exact active-class="active" to="/Home"
+            >首页</router-link
+          >
         </nav>
         <nav class="router_item">
-          <router-link class="link_btn" to="/Industrial">乡村发展</router-link>
+          <router-link class="link_btn" active-class="active" to="/Industrial"
+            >乡村发展</router-link
+          >
         </nav>
         <nav class="router_item">
-          <router-link class="link_btn" to="/">乡村文化</router-link>
+          <router-link class="link_btn" active-class="active" to="/Rural"
+            >乡村文化</router-link
+          >
         </nav>
         <nav class="router_item">
-          <router-link class="link_btn" to="/">人才引进</router-link>
-        </nav>
-        <nav class="router_item">
-          <router-link class="link_btn" to="/">振兴政策</router-link>
+          <router-link class="link_btn" active-class="active" to="/talent"
+            >人才引进</router-link
+          >
         </nav>
       </div>
     </div>
@@ -40,26 +46,36 @@ export default {
  * 主体box
  */
 .nav_bar {
-  height: 70px;
+  height: 90px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgba(255, 192, 203, 0.487);
+  background-color: #6d0f0f;
   font-weight: bold;
   font-size: 20px;
+  position: relative;
+  z-index: 999;
+  /**
   position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
+   * 
+   */
+
   /**
  * logo
  */
-  .left_box {
+  .logo_box {
     display: flex;
-    align-items: center;
-    background-color: #b54006;
+    flex-direction: row;
+    color: #f1ff56;
+
+    :nth-child(2) {
+      color: #00ab25;
+    }
   }
 
   /**
@@ -71,19 +87,27 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-color: #0675b5;
 
     .router_item {
       height: 100%;
-      width: 120px;
-      background-color: #06b54f;
-      line-height: 70px;
+      width: 130px;
+      line-height: 90px;
       text-align: center;
 
       .link_btn {
         text-decoration: none;
         height: 100%;
         display: block;
+        color: #00ab25;
+        transition: all 0.5s;
+      }
+
+      .active {
+        color: #f1ff56;
+      }
+
+      :hover {
+        color: #f1ff56;
       }
     }
   }

@@ -6,19 +6,9 @@
         <!-- 轮播图 -->
         <swiper :options="swiperOption" ref="mySwiper" class="swiper_max">
           <!-- 内容 -->
-          <swiper-slide>
-            <div class="swpier_img">1</div>
+          <swiper-slide v-for="item in swiperSrc" :key="item.id">
+            <img :src="item.src" class="swpier_img" />
           </swiper-slide>
-          <swiper-slide>
-            <div class="swpier_img">2</div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="swpier_img">3</div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="swpier_img">4</div>
-          </swiper-slide>
-
           <!-- 分页器 -->
           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
@@ -29,10 +19,16 @@
           <span>乡村发展</span>
         </div>
         <div class="conent_box">
-          <div class="con_box"></div>
-          <div class="con_box"></div>
-          <div class="con_box"></div>
-          <div class="con_box"></div>
+          <div class="con_box" v-for="item in developimg" :key="item.id">
+            <el-image
+              style="width: 100%; height: 100%"
+              :src="item.src"
+              :fit="fit"
+            ></el-image>
+          </div>
+        </div>
+        <div class="see_more">
+          <router-link to="/Industrial" class="more">查看更多>></router-link>
         </div>
       </div>
       <!-- 乡村文化传承 -->
@@ -41,10 +37,17 @@
           <span>乡村文化</span>
         </div>
         <div class="conent_box">
-          <div class="con_box">
+          <div class="con_box" v-for="item in cultureimg" :key="item.id">
+            <!-- <div class="img_box"></div>
+            <div class="text_box">
+              <p>XXXXXXXX</p>
+              <p></p>
+            </div> -->
             <div class="img_box"></div>
-            <div class="text_box"></div>
           </div>
+        </div>
+        <div class="see_more">
+          <router-link to="/" class="more">查看更多>></router-link>
         </div>
       </div>
       <!-- 乡村人才引进 -->
@@ -126,15 +129,10 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- 乡村振兴政策 -->
-      <div class="policy_box">
-        <div class="title_box">
-          <span>振兴政策</span>
+        <div class="see_more">
+          <router-link to="/" class="more">查看更多>></router-link>
         </div>
       </div>
-      <!-- 底部 -->
-      <footer></footer>
     </div>
   </div>
 </template>
@@ -143,6 +141,9 @@
 // 轮播图
 import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import developimg1 from "@/assets/Homeback.jpg";
+import swiperimg1 from "@/assets/swiperimg.jpg";
+import swiperimg2 from "@/assets/swiperimg2.jpg";
 
 export default {
   name: "carrousel",
@@ -172,6 +173,31 @@ export default {
           clickable: true,
         },
       },
+      // 轮播图链接
+      swiperSrc: [
+        { id: 1, src: swiperimg1 },
+        { id: 2, src: swiperimg2 },
+        { id: 3, src: swiperimg1 },
+        { id: 4, src: swiperimg2 },
+      ],
+      // 乡村发展图片
+      developimg: [
+        { id: 1, src: developimg1 },
+        { id: 2, src: developimg1 },
+        { id: 3, src: developimg1 },
+        { id: 4, src: developimg1 },
+      ],
+      // 乡村文化图片
+      cultureimg: [
+        { id: 1, src: "XXXXXXXX" },
+        { id: 2, src: "XXXXXXXX" },
+        { id: 3, src: "XXXXXXXX" },
+        { id: 4, src: "XXXXXXXX" },
+        { id: 5, src: "XXXXXXXX" },
+        { id: 6, src: "XXXXXXXX" },
+        { id: 7, src: "XXXXXXXX" },
+        { id: 8, src: "XXXXXXXX" },
+      ],
     };
   },
   components: {
@@ -192,275 +218,4 @@ export default {
 };
 </script>
 
-<style lang="less">
-* {
-  margin: 0;
-  padding: 0;
-}
-.body_box {
-  width: 100%;
-  height: 500%;
-  position: absolute;
-  top: 0;
-  transition: all 0.3s ease;
-
-  /**
-   * 轮播
-   */
-  .swiper_box {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-color: #ae1414;
-
-    /**
-     * 轮播图片盒子
-     */
-    .swiper_max {
-      height: 100%;
-      width: 100%;
-      background-color: #000;
-
-      :nth-child(2) {
-        .swpier_img {
-          height: 100%;
-          width: 100%;
-          background-color: #24cfdb;
-        }
-      }
-
-      :nth-child(3) {
-        .swpier_img {
-          height: 100%;
-          width: 100%;
-          background-color: #20b702;
-        }
-      }
-
-      :nth-child(4) {
-        .swpier_img {
-          height: 100%;
-          width: 100%;
-          background-color: #0214b7;
-        }
-      }
-
-      :nth-child(5) {
-        .swpier_img {
-          height: 100%;
-          width: 100%;
-          background-color: #a8b702;
-        }
-      }
-    }
-  }
-
-  /**
-     * 标题
-     */
-  .title_box {
-    height: auto;
-    width: auto;
-    font-size: 50px;
-    margin-top: 90px;
-    margin-bottom: 135px;
-    color: #fff;
-    font-weight: bold;
-  }
-
-  /**
-   * 乡村发展
-   */
-  .develop_box {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    background-size: cover;
-    background-color: #24db73;
-
-    /**
-     * 内容盒子
-     */
-    .conent_box {
-      height: auto;
-      width: 1650px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: start;
-
-      .con_box {
-        height: 650px;
-        width: 350px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0px 10px 20px #000000;
-      }
-    }
-  }
-  /**
-   * 乡村文化
-   */
-  .culture_box {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-size: cover;
-    background-color: #24cfdb;
-
-    /**
-     * 内容盒子
-     */
-    .conent_box {
-      height: auto;
-      width: 1650px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: start;
-
-      .con_box {
-        height: 850px;
-        width: 100%;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0px 10px 20px #000000;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-
-        .img_box {
-          height: 100%;
-          width: 550px;
-          background-color: #000;
-          border-radius: 10px;
-        }
-
-        .text_box {
-          height: 500px;
-          width: 900px;
-          background-color: #000;
-          margin-left: 95px;
-        }
-      }
-    }
-  }
-  /**
-   * 人才引进
-   */
-  .talent_box {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    color: white;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-size: cover;
-    background-color: #ffb52b;
-
-    .title_box {
-      margin-bottom: 110px;
-    }
-
-    .conent_box {
-      height: 1200px;
-      width: 1400px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: start;
-      flex-wrap: wrap;
-
-      .con_box:hover {
-        margin-right: 10px;
-        margin-bottom: 50px;
-        box-shadow: 0px 10px 20px #000000;
-      }
-
-      .con_box {
-        height: 450px;
-        width: 300px;
-        background-color: #fff;
-        margin-bottom: 40px;
-        padding: 5px;
-        border-radius: 10px;
-        transition: all 0.5s;
-
-        .img_box {
-          height: 60%;
-          width: 100%;
-          background-color: #000;
-          border-radius: 10px 10px 0px 0px;
-        }
-
-        .text_box {
-          height: 170px;
-          width: 100%;
-          background-color: #00622e;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
-
-          .name_box {
-            height: auto;
-            width: auto;
-            font-size: 25px;
-            font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 10px;
-          }
-
-          .text_body {
-            height: 100px;
-            width: 95%;
-            padding: 5px;
-            background-color: #afa6ff;
-            display: -webkit-box;
-            word-break: break-all;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 5;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-        }
-      }
-    }
-  }
-  /**
-   * 振兴政策
-   */
-  .policy_box {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-color: #00622e;
-  }
-
-  footer {
-    height: 200px;
-    width: 100%;
-    background-color: #000;
-  }
-}
-/**
- * 页脚
- */
-</style>
+<style src="../assets/style/Home.css" scoped></style>

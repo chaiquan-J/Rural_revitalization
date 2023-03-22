@@ -2,21 +2,41 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Industrial from '../views/Industrial_development.vue'
+import Rural from '../views/Rural_culture.vue'
+import Talent from '../views/Talent.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  //这些是示例
   {
     path: '/',
+    redirect: '/Home'
+  },
+  {
+    // 首页
+    path: '/Home',
     name: 'Home',
     component: Home
   },
   {
+    // 乡村发展
     path: '/Industrial',
     name: 'Industrial',
     component: Industrial
   },
+  {
+    // 乡村文化
+    path: '/Rural',
+    name: 'Rural',
+    component: Rural
+  },
+  {
+    // 人才引进
+    path: '/Talent',
+    name: 'Talent',
+    component: Talent
+  },
+  // 示例
   // {
   //   path: '/about',
   //   name: 'About',
@@ -33,6 +53,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  linkActiveClass: 'active',
   routes
 })
 

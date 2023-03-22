@@ -2,10 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+// 饿了么组件库引入
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
 // swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-// require styles
-import 'swiper/dist/css/swiper.css'
+import 'swiper/dist/css/swiper.css'//引入样式
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 Vue.config.productionTip = false

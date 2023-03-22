@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.body_box {
+  height: 100%;
+  width: 100%;
+}
+.body_box .swiper_box {
+  height: 1207px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-color: #ae1414;
+}
+.body_box .swiper_box .swiper_max {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  line-height: 100%;
+}
+.body_box .swiper_box .swiper_max .swpier_img {
+  height: 100%;
+  width: 100%;
+}
+.body_box .swiper_box .swiper_max :nth-child(2) .swpier_img {
+  background-color: #24cfdb;
+}
+.body_box .swiper_box .swiper_max :nth-child(3) .swpier_img {
+  background-color: #20b702;
+}
+.body_box .swiper_box .swiper_max :nth-child(4) .swpier_img {
+  background-color: #0214b7;
+}
+.body_box .swiper_box .swiper_max :nth-child(5) .swpier_img {
+  background-color: #a8b702;
+}
+.body_box .title_box {
+  height: auto;
+  width: auto;
+  font-size: 50px;
+  margin-top: 90px;
+  margin-bottom: 110px;
+  color: #00ab25;
+  font-weight: bold;
+}
+.body_box .see_more {
+  height: auto;
+  width: auto;
+  margin-bottom: 80px;
+}
+.body_box .see_more .more {
+  font-size: 35px;
+  color: #00ab25;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.body_box .see_more :hover {
+  color: #f1ff56;
+}
+.body_box .develop_box {
+  height: 1150px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+}
+.body_box .develop_box .conent_box {
+  height: auto;
+  width: 1650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+.body_box .develop_box .conent_box :hover {
+  box-shadow: 0px 10px 20px #000000;
+}
+.body_box .develop_box .conent_box .con_box {
+  height: 650px;
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.body_box .develop_box .conent_box .con_box img {
+  height: 100%;
+  width: 100%;
+}
+.body_box .develop_box .see_more {
+  margin-top: 80px;
+}
+.body_box .culture_box {
+  height: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover;
+}
+.body_box .culture_box .conent_box {
+  height: auto;
+  width: 1400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+.body_box .culture_box .conent_box .con_box {
+  height: 350px;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.body_box .culture_box .conent_box .con_box .img_box {
+  height: 100%;
+  width: 550px;
+  background-color: #000;
+  border-radius: 10px;
+}
+.body_box .culture_box .conent_box .con_box .text_box {
+  height: 600px;
+  width: 900px;
+  background-color: #000;
+  margin-left: 95px;
+}
+.body_box .culture_box .conent_box .con_box .text_box :nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+}
+.body_box .culture_box .see_more {
+  margin-top: 80px;
+}
+.body_box .talent_box {
+  height: 1450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover;
+}
+.body_box .talent_box .title_box {
+  margin-bottom: 110px;
+}
+.body_box .talent_box .conent_box {
+  height: 1200px;
+  width: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.body_box .talent_box .conent_box .con_box:hover {
+  box-shadow: 5px 20px 20px #000000;
+}
+.body_box .talent_box .conent_box .con_box {
+  height: 450px;
+  width: 300px;
+  background-color: #fff;
+  margin-bottom: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  box-shadow: 0px 10px 10px #000000;
+}
+.body_box .talent_box .conent_box .con_box .img_box {
+  height: 270px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+}
+.body_box .talent_box .conent_box .con_box .text_box {
+  height: 170px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.body_box .talent_box .conent_box .con_box .text_box .name_box {
+  height: auto;
+  width: auto;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.body_box .talent_box .conent_box .con_box .text_box .text_body {
+  height: 100px;
+  width: 95%;
+  padding: 5px;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
