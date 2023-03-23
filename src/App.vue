@@ -8,9 +8,9 @@
     <!-- 底部 -->
     <footer>
       <div class="foot_box">
-        <p>Address/地址：XXXXX省XXX市XXX县XXX路XXX号</p>
-        <p>TEL/联系电话：000-000000</p>
-        <p>MAL/邮箱：xxx@.co.m</p>
+        <p>Address/地址:XXXXX省XXX市XXX县XXX路XXX号</p>
+        <p>TEL/联系电话:000-000000</p>
+        <p>MAL/邮箱:xxx@.com</p>
       </div>
     </footer>
   </div>
@@ -40,10 +40,6 @@ export default {
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: #6d0f0f;
 }
 
 footer {

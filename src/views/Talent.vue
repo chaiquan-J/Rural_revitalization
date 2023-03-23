@@ -3,7 +3,9 @@
   <div>
     <div class="body_box">
       <div class="conent">
-        <div class="img_box"></div>
+        <div class="img_box">
+          <el-image style="height: 100%; width: 100%" fit="cover"> </el-image>
+        </div>
         <div class="introduce">
           <div class="title_1">人才引进的重要性</div>
           <div class="text_1">
