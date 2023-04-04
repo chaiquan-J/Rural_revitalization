@@ -14,10 +14,12 @@
   align-items: center;
   margin-bottom: 100px;
 }
-.body_box .conent .img_box {
+.body_box .conent .head_img {
   height: 450px;
   width: 100%;
   background-color: #96ff45;
+  background: url(../img/bg-banner10.jpg) no-repeat 0% 20%;
+  background-size: 100%;
 }
 .body_box .conent .introduce {
   height: 350px;

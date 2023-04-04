@@ -5,6 +5,8 @@
 .body_box {
   height: 100%;
   width: 100%;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
 }
 .body_box .swiper_box {
   height: 1207px;

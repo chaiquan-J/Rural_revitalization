@@ -57,4 +57,16 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  // 路由跳转后，让页面回到顶部
+  // chrome
+  document.body.scrollTop = 0; // firefox
+  document.documentElement.scrollTop = 0; // safari
+  window.pageYOffset = 0; // 调用 next()，一定要调用 next 方法，否则钩子就不会被销毁
+  next();
+  //to 即将进入的路由
+  //from 即将离开的路由
+  //next 放行
+});
+
 export default router

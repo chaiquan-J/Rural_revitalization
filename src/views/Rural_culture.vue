@@ -3,9 +3,7 @@
   <div>
     <div class="body_box">
       <div class="conent">
-        <div class="img_box">
-          <el-image style="height: 100%; width: 100%" fit="cover"> </el-image>
-        </div>
+        <div class="head_img"></div>
         <div class="introduce">
           <div class="title_1">乡村文化的传承</div>
           <div class="text_1">
