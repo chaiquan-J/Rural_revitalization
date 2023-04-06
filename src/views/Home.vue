@@ -28,11 +28,15 @@
         </div>
         <div class="conent_box">
           <div class="con_box" v-for="item in developimg" :key="item.id">
-            <el-image
-              style="width: 100%; height: 100%"
-              :src="item.src"
-              :fit="item.fit"
-            ></el-image>
+            <div
+              class="img_box"
+              :style="{
+                background: item.src,
+                backgroundSize: item.backsize,
+                backgroundPosition: item.backposi,
+              }"
+            ></div>
+            <div class="name_box">{{ item.text }}</div>
           </div>
         </div>
         <div class="see_more">
@@ -46,11 +50,6 @@
         </div>
         <div class="conent_box">
           <div class="con_box" v-for="item in cultureimg" :key="item.id">
-            <!-- <div class="img_box"></div>
-            <div class="text_box">
-              <p>XXXXXXXX</p>
-              <p></p>
-            </div> -->
             <div
               class="img_box"
               :style="{
@@ -100,6 +99,9 @@ import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 // 导入图片
 import developimg1 from "@/assets/img/developimg1.jpg";
+import developimg2 from "@/assets/img/developimg2.png";
+import developimg3 from "@/assets/img/developimg3.jpeg";
+import developimg4 from "@/assets/img/developimg4.jpg";
 import swiperimg1 from "@/assets/img/bg-banner6.jpg";
 import swiperimg2 from "@/assets/img/bg-banner7.jpg";
 import swiperimg3 from "@/assets/img/bg-banner8.jpg";
@@ -143,13 +145,13 @@ export default {
       swiperSrc: [
         {
           id: 1,
-          src: "url(" + swiperimg1 + ")" + " no-repeat",
+          src: "url(" + swiperimg2 + ")" + " no-repeat",
           backsize: "100%",
           backposi: "0% 0%",
         },
         {
           id: 2,
-          src: "url(" + swiperimg2 + ")" + " no-repeat",
+          src: "url(" + swiperimg1 + ")" + " no-repeat",
           backsize: "100%",
           backposi: "0% 0%",
         },
@@ -168,10 +170,34 @@ export default {
       ],
       // 乡村发展
       developimg: [
-        { id: 1, src: developimg1, fit: "fit" },
-        { id: 2, src: developimg1, fit: "fit" },
-        { id: 3, src: developimg1, fit: "fit" },
-        { id: 4, src: developimg1, fit: "fit" },
+        {
+          id: 1,
+          src: "url(" + developimg2 + ")" + " no-repeat",
+          backsize: "cover",
+          backposi: "center",
+          text: "产业",
+        },
+        {
+          id: 2,
+          src: "url(" + developimg3 + ")" + " no-repeat",
+          backsize: "cover",
+          backposi: "50% 0%",
+          text: "教育",
+        },
+        {
+          id: 3,
+          src: "url(" + developimg4 + ")" + " no-repeat",
+          backsize: "cover",
+          backposi: "50% 0%",
+          text: "医疗",
+        },
+        {
+          id: 4,
+          src: "url(" + developimg1 + ")" + " no-repeat",
+          backsize: "cover",
+          backposi: "50% 0%",
+          text: "旅游",
+        },
       ],
       // 乡村文化
       cultureimg: [

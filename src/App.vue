@@ -8,9 +8,10 @@
     <!-- 底部 -->
     <footer>
       <div class="foot_box">
-        <p>Address/地址:XXXXX省XXX市XXX县XXX路XXX号</p>
-        <p>TEL/联系电话:000-000000</p>
-        <p>MAL/邮箱:xxx@.com</p>
+        <p>Address/地址:崇左市政务服务中心四楼</p>
+        <p>TEL/联系电话:(0771)7969257</p>
+        <p>MAL/邮箱:czdsjwgk@gxi.gov.cn</p>
+        <p>官方地址:<a href="#">http://www.chongzuo.gov.cn/</a></p>
       </div>
     </footer>
   </div>
@@ -43,9 +44,9 @@ export default {
 }
 
 footer {
-  height: 200px;
+  height: 170px;
   width: 100%;
-  background-color: #4e4e4e;
+  background-color: #6d0f0f;
 
   .foot_box {
     height: 100%;
@@ -56,6 +57,11 @@ footer {
     align-items: center;
     justify-content: space-around;
     color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
 </style>
