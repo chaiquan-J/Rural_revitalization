@@ -7,7 +7,7 @@
         <div class="introduce">
           <div class="title_1">乡村文化的传承</div>
           <div class="text_1">
-            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,
+            随着当前我国社会主义新农村建设的不断加快，我们必须清楚的认识到传承和保护农村优秀传统文化对于弘扬和传播中华民族优秀文化具有着非常重要的现实意义。农村传统文化作为中华民族传统文化的重要组成部分，它不应该随着新农村的建设而被消亡。而应该在社会主义新农村建设中得以大力的发扬和传承。但当前我国在对农村文化的传承上出现了不少不和谐的声音，严重阻碍了农村传统文化的传承。比如在有的地区，农村传统文明出现了没落、有的地区出现了无人传承的现象。这些传统文化越来越的多变成了我们记忆中的景象。
           </div>
         </div>
         <!-- 样板 -->
@@ -36,12 +36,17 @@
         <!-- 循环渲染 -->
         <div class="con_box" v-for="conitem in conentdata" :key="conitem.id">
           <div class="left_box">
-            <el-carousel trigger="click" height="800px">
+            <el-carousel
+              trigger="click"
+              height="800px"
+              indicator-position="none"
+            >
               <el-carousel-item v-for="item in conitem.imgurl" :key="item.id">
                 <el-image
                   style="width: 100%; height: 100%"
-                  :src="item.imgurl"
-                  :preview-src-list="item.srcList"
+                  :src="item.url"
+                  :preview-src-list="conitem.srcList"
+                  :fit="item.fit"
                 >
                 </el-image>
               </el-carousel-item>
@@ -60,39 +65,103 @@
 </template>
   
 <script>
+import dlw1 from "../assets/img/dlw1.jpg";
+import dlw2 from "../assets/img/dlw2.jpg";
+import dlw3 from "../assets/img/dlw3.jpg";
+import jsj1 from "../assets/img/jsj.png";
+import jsj2 from "../assets/img/jsj2.png";
+import jsj3 from "../assets/img/jsj3.png";
+import hsj1 from "../assets/img/hsj1.png";
+import hsj2 from "../assets/img/hsj2.png";
+import hsj3 from "../assets/img/hsj3.png";
+import hsj4 from "../assets/img/hsj4.png";
+import hsj5 from "../assets/img/hsj5.png";
+import hsj6 from "../assets/img/hsj6.png";
+import hsj7 from "../assets/img/hsj7.png";
+import hsj8 from "../assets/img/hsj8.png";
+import ndj1 from "../assets/img/ndj1.jpg";
+import ndj2 from "../assets/img/ndj2.jpg";
+import ndj3 from "../assets/img/ndj3.jpg";
+import ndj4 from "../assets/img/ndj4.jpg";
+import sjj1 from "../assets/img/sjj1.jpg";
+import sjj2 from "../assets/img/sjj2.jpg";
+import sjj3 from "../assets/img/sjj3.jpg";
+import sjj4 from "../assets/img/sjj4.jpg";
+import sjj5 from "../assets/img/sjj5.jpg";
+import sjj6 from "../assets/img/sjj6.jpg";
+
 export default {
   data() {
     return {
       conentdata: [
         {
           id: 1,
-          imgnb: 4,
           imgurl: [
-            "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
-            "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+            { id: 1, url: dlw1, fit: "cover" },
+            { id: 2, url: dlw2, fit: "cover" },
+            { id: 3, url: dlw3, fit: "cover" },
           ],
           // 点开大图 链接同上
-          srcList: [
-            "https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg",
-            "https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg",
-          ],
-          title_text: "XXXXXXXX",
-          text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,",
+          srcList: [dlw1, dlw2, dlw3],
+          title_text: "打榔舞",
+          text: "   “打榔舞”是广西天等县的一种壮族舞蹈，属于广西壮族自治区级非物质文化遗产名录项目，流传于世已经有1391年的历史，是居住在天等地区的壮族先民在唐代武德年间至北宋靖康年间为酬谢天公地神赐予的福泽，为祝愿年年风调雨顺，岁岁国泰民安所创造的用于酬神、还愿、祭祀、娱乐等活动的民间舞。\n   其舞以打“榔”为表现形式，以农耕时代稻作生活为表现内容，以当地民间习俗节日为活动时空，具有古朴典雅，节令时令，休闲娱乐等特点，长期以来深受当地壮族人民所喜爱。\n    “打榔舞”主要道具为木榔，是用一根长约六尺、直径二尺的大木凿制而成的大木槽。表演者不分男女老少，有二人对打、四人对打、多人交错对打等多种方式。“壮家木榔壮人敲咧，振臂挥杵敲起来啰……”，当《打榔舞》的音乐响起后，每人用一米多长的木杵有节奏地敲击榔壁、榔底和榔边，动作欢快有力，节奏稳重，声调若鼓，闻于数里，以此表达壮族人民对五谷丰登、六畜兴旺、幸福吉祥的祈求和渴望。\n    天等县壮族打榔舞2007年经县级专家组审核通过，成为天等县第一批非物质文化遗产名录项目。2008年1月广西崇左市级专家组审核通过，成为广西崇左市首批非物质文化遗产名录项目之一。2010年，天等县《打榔舞》成为广西壮族自治区非物质文化遗产名录项目。该舞蹈以其独特的民族个性和民族风格，得到了越来越多人的青睐，不但在广西区内具有广泛的影响，而且在东南亚等地区也同样具有着广泛的影响。",
         },
         {
           id: 2,
-          imgnb: 4,
           imgurl: [
-            "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
-            "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+            { id: 1, url: jsj1, fit: "cover" },
+            { id: 2, url: jsj2, fit: "cover" },
+            { id: 3, url: jsj3, fit: "cover" },
           ],
           // 点开大图 链接同上
-          srcList: [
-            "https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg",
-            "https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg",
+          srcList: [jsj1, jsj2, jsj3],
+          title_text: "金山节",
+          text: "   “金山节”是广西崇左市江州区左州镇的一个传统节日，主要内容为祈福、抢花炮、文艺演出、百家宴。时间为每年的农历二月十九。\n   左州金山节抢花炮盛会历史悠久，据考证已有300多年的历史。金山花炮节又名“观音诞”，每逢农历二月十九日，当地群众自发组织举行舞狮、舞龙、舞麒麟、八仙过海等节目，一边表演一边在左州镇大街小巷里游行，行大运。抢花炮是重彩戏，每个街道选派一支队伍参加，中头彩（即第一场的头炮）预示得到一个最好的彩头，抢到头彩的小伙子就会受到许多年轻漂亮的姑娘青睐。活动的壮族文化气息浓厚，极具壮族文化底蕴，被先后列入崇左市、广西壮族自治区非物质文化遗产名录。（崇左林越）\n   其活动内容有观音出游、八仙过海、文艺演出、对山歌、广场演出、抢花炮比赛、百家宴。\n    观音出游和“八仙”贺寿仪式拉开金山花炮节的序幕。“八仙”贺寿仪式由8名可爱的小男孩、小女孩分别扮演，由身着盛装、持扇舞绸的百人秧歌队护送，伴着八音锣鼓和一路爆竹声游经全镇5条街道，共贺观音诞辰。而同时，金山寺里已设置香坛，供香客们烧香拜祭，祈福求安。虔诚的香客们手持香火，沿着台阶拾级而上，进入金山寺内，祈福求平安。伴随着观音出游和八仙过海贺寿队伍的归来，金山广场变成了人流汇集的地方：四面八方涌入的群众将金山广场围得水泄不通，广场表演队各显神通，腰鼓队鼓乐齐鸣，秧歌队歌步整齐优美，舞狮队身着绿衣，队员步伐矫健，“巨龙”舞起来，“春牛”跳起来，共祝风调雨顺，国泰民安。\n    金山节当天还在左州街道举行百家宴，乡亲邻里坐到一起。活动当天可品尝到艾叶糍粑、五色糯米、红血肠、盐糕、甜酒等特色小吃。\n    压轴大戏——抢花炮比赛，抢得第一名的被称为头炮，花炮有着深刻寓意：“送子头炮、送财二炮、送平安三炮、送长寿四炮”。花炮承载着民众如此朴素美好的情怀。\n    过去金山节每3年会吃一次斋，也就是活动当天只吃素食。随着时间的推移，国家经济取得长足发展，物质生活改善，这个习俗已经被放弃。金山经不仅承载着左州人民对美好生活的向往，金山节也成为壮族深厚文化底蕴的名片，被越来越多的人所熟知，吸引着越来越多的游人。金山节相继被列入崇左市非物质文化遗产和广西壮族自治区非物质文化遗产。",
+        },
+        {
+          id: 3,
+          imgurl: [
+            { id: 1, url: hsj1, fit: "cover" },
+            { id: 2, url: hsj2, fit: "cover" },
+            { id: 3, url: hsj3, fit: "cover" },
+            { id: 4, url: hsj4, fit: "cover" },
+            { id: 5, url: hsj5, fit: "cover" },
+            { id: 6, url: hsj6, fit: "cover" },
+            { id: 7, url: hsj7, fit: "cover" },
+            { id: 8, url: hsj8, fit: "cover" },
           ],
-          title_text: "XXXXXXXX",
-          text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,",
+          // 点开大图 链接同上
+          srcList: [hsj1, hsj2, hsj3, hsj4, hsj5, hsj6, hsj7, hsj8],
+          title_text: "花神节",
+          text: "   花神节，花朝节的别称。也是传说中的“百花生日”、“花神生日”。因古时有“花王掌管人间生育”之说，故又是生殖崇拜的节日。花朝节又称 “挑菜节”。汉族传统节日。流行于东北、华北、华东、中南等地。农历二月初二举行，也有十月十二、十月十五元宵节的。节日期间，人们结伴到郊外游览赏花，称为“踏青”，姑娘们剪五色彩纸粘在花枝上，称为“赏红”。各地还有“装狮花”、“放花神灯”等风俗。在我国古代是一个十分重要的民间传统节日。\n    5月1日。是西方各国庆祝花神的节日。各国有不同的节名，庆祝活动也不相同。在英国被称为“五朔节”，人们围绕着象征生命与丰收的五月柱跳舞、游戏，并选出五朔节女王。在希腊叫做“迎春节”，人们把用鲜花编成的花环挂在房前。在芬兰以及斯堪的纳维亚国家叫做“春节”，意即庆祝春天的来临。古罗马的花神节，是为了表示对罗马神话里的费罗拉的尊敬而设立的，费罗拉是古罗马人所崇拜的花神，也是罗马神话中青春的象征。在节日的这些天里，无论平民还是贵族，都会将自己打扮一新，装饰着玫瑰花，来到大街上通宵达旦的畅饮，载歌载舞。\n   中国的花朝节（简称花朝），也称花神节、百花生日等。节期因地而异，中原和西南地区以夏历二月初二为花朝；江南和东北地区以二月十五为花朝，据说这是与八月十五中秋节相应，称“花朝”对“月夕”。此外，还有一些地区以二月十二或十八为花朝节。这种现象，可能与各地花信的早迟有关。花朝节在公历中的日期是3月份，大致在节气“惊蛰”到“春分”之间。此时春回大地，万物复苏，草木萌青，百花或含苞或吐绽或盛开，定其中一天为“百花生日”是十分恰当的。世界上像中国那样定出花的节日的民族是不多的，可见汉民族对花的热爱有悠久传统。“百花生日是良辰，未到花朝一半春；万紫千红披锦绣，尚劳点缀贺花神。”这是旧时江南民间庆贺百花生日风俗盛况的写照，夜间在花树枝梢上张挂“花神灯”，灯火与红花绿枝相映成趣；青年男女漫步花丛中，赏花谈情；文人墨客触景生情，吟诗作画……对于各地花匠或花卉爱好者，更是一展各自手艺的好时节。\n   赏花是生活中的一种雅兴，汉民族在赏花方面所积累的民俗文化成果尤称丰富，旧时流行于各地城乡的花朝节就是一例。二月仲春，正值芳菲盛开、绿枝红葩的时节，为花朝节的活动提供了繁丽丰硕的天然背景。这一天花贩在出售莳花时，照例用红布条或红纸束缚花枝，许多养花人家亦将彩帛红纸等悬挂在花枝上，谓之“赏红”或“护花”。诗云：“春到花朝碧染丛，枝梢剪彩袅东风。蒸霞五色飞晴坞，画阁开尊助赏红。”正是此俗的写实。众多的花农花贩及从事其他种植业的农民，率于此日会集花神庙前，杀牲供果以祝神诞，或演戏文娱神，引得成群结队的游客前来观看，形成热闹的庙会场景。好事者或择园亭胜地举办类似今日花展的“斗花会”、“扑蝶会”，或于夜晚聚众提灯游行，谓之“花神灯”。传统的花朝节如今已流变为更加绚丽夺目的时令性花市花展，群众性的赏花风潮往往经月不退，远远超过了古代的一日之期。但是，若追溯这一传统习俗的来历，竟是掩映迷离，令人看不清楚。",
+        },
+        {
+          id: 4,
+          imgurl: [
+            { id: 1, url: ndj1, fit: "cover" },
+            { id: 2, url: ndj2, fit: "cover" },
+            { id: 3, url: ndj3, fit: "cover" },
+            { id: 4, url: ndj4, fit: "cover" },
+          ],
+          // 点开大图 链接同上
+          srcList: [ndj1, ndj2, ndj3, ndj4],
+          title_text: "侬垌节",
+          text: "   “侬垌节”是金龙镇边民长衣壮特有的节日。传统的“侬垌节”有祭祀天神，祈盼上苍来年赐福，寻求风调雨顺等之意。另外，开展民间文化交流活动，青年男女利用这次机会进行情歌对唱物色对象寻配偶，在“侬垌节”上选中对象后，回家后差媒去说亲。随着历史的变迁和经济的发展，这个具有浓厚民族特色的节日，赋予了新的内容，新的含义。\n    每年的农历正月十一，龙州县金龙镇双蒙村板池屯（美女村）的“侬垌节”都会隆重举行。那一天，天刚刚亮，板池屯附近村屯的男女老少就早早起床，忙着换新衣作打扮。经过一番的精心打扮后，就三五成群的从四面八方涌向板池屯，赶一趟新年“侬垌节”。\n    因此，“侬垌节”当天，板池屯村头巷尾热闹非凡。由金龙镇和屯里组织的舞龙、斗鸡、唱山歌、抛绣球、篮球比赛、拔河、踢毽子、打陀螺、跳民族舞蹈等活动都围满观众，并不断传出阵阵喝彩声。最富有民族特色的要数山歌对唱了，这也是最受男女青年欢迎的节目，因为在这里，他们不仅可以一展歌喉，有的还以山歌传情觅到知音、情侣。现在的山歌对唱中，可以听到歌唱党的好政策、歌唱计划生育好、歌唱美好新生活、宣传“三个代表”重要思想等内容的山歌。从这古朴、高亢、悠长的山歌声中，不难听出边民们对党的热爱，对幸福生活的赞美。抛绣球比赛中，男队女队各一字排开，轮番地将绣球抛向设在一根高竹竿顶上的圆圈内。每有绣球穿圈而过，人们便报以欢呼声和掌声。",
+        },
+        {
+          id: 5,
+          imgurl: [
+            { id: 1, url: sjj1, fit: "cover" },
+            { id: 2, url: sjj2, fit: "cover" },
+            { id: 3, url: sjj3, fit: "cover" },
+            { id: 4, url: sjj4, fit: "cover" },
+            { id: 5, url: sjj5, fit: "cover" },
+            { id: 6, url: sjj6, fit: "cover" },
+          ],
+          // 点开大图 链接同上
+          srcList: [sjj1, sjj2, sjj3, sjj4, sjj5, sjj6],
+          title_text: "壮族霜降节",
+          text: "   农历二十四节气（壮族霜降节）是中国少数民族地区一种特殊的民俗活动，主要流行于广西壮族地区的天等、大新、德保、靖西、那坡等县市，以及云南东部等地区，国家级非物质文化遗产之一。\n    霜降是秋季的最后一个节气，也是步入冬季的前奏。每年农历九月，晚稻收割结束之后的霜降期间，劳作了一年的壮族乡民们要举行壮族霜降节。壮族霜降节是壮族典型的民俗活动，依托于壮族稻作文化，最初是壮族民众酬谢自然、庆祝丰收的一种形式，表达人们祈盼五谷丰登的良好愿望，后发展成为祭祀民族英雄、进行商贸活动、民俗文化表演的综合性民俗活动。农历二十四节气（壮族霜降节）于每年农历霜降后的9天内举行，参加人数万余人之多。\n   2014年11月11日，广西壮族自治区天等县申报的农历二十四节气（壮族霜降节）作为“农历二十四节气”的扩展项目入选第四批国家级非物质文化遗产代表性项目名录。2016年11月30日，中国申报的“二十四节气——中国人通过观察太阳周年运动而形成的时间知识体系及其实践”列入联合国教科文组织人类非物质文化遗产代表作名录，壮族霜降节作为中国二十四节气扩展项目之一入选。\n    农历二十四节气（壮族霜降节）内容涵盖面很广，主要有酬谢自然、纪念民族英雄、文体活动、走访亲友等内容，参与其中的人们年复一年，热情不减。\n（一）酬谢自然\n    农历二十四节气（壮族霜降节）头降的早晨，先要在戏台举行酬谢活动。人们进行祭拜，从请神、求神到送神，将壮族美好和谐的祈愿寄托在美好的自然事物身上，以表达对自然之神的崇敬之情，表达祈盼五谷丰登的良好愿望。此外，还增加了祈福长寿的内容。\n（二）纪念民族英雄\n    在酬谢自然之神后，由祭司念诵祭文，纪念民族英雄瓦氏夫人，颂扬瓦氏夫人率领将士打击倭寇的英雄事迹，传授民族历史知识，宣扬保卫家园、谋求平安的民族精神。\n（三）文体活动\n    农历二十四节气（壮族霜降节）是文化展演的大舞台，也为青年男女提供了一个交流平台。人们以歌传史、以歌交友、以歌传情，形成“霜降歌圩”。传统的霜降节还有舞龙舞狮、斗鸡耍猴、对歌唱土戏等活动。此外，政府和当地社区还组织篮球赛、拔河比赛、山歌比赛等娱乐活动，使霜降节活动更加丰富多彩。\n（四）走亲访友\n    这一节期，各家各户都准备“糍那”“迎霜粽”等各种特色食品，招待亲朋好友，人们以有朋友到家宴饮为荣。",
         },
       ],
     };

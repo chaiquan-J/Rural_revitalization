@@ -182,11 +182,11 @@
   background-size: cover;
 }
 .body_box .talent_box .title_box {
-  margin-bottom: 110px;
+  margin-bottom: 120px;
 }
 .body_box .talent_box .conent_box {
   height: auto;
-  width: 1400px;
+  width: 1700px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -206,6 +206,7 @@
   border-radius: 10px;
   transition: all 0.5s;
   box-shadow: 0px 5px 10px #000000;
+  margin-bottom: 50px;
 }
 .body_box .talent_box .conent_box .con_box .img_box {
   height: 270px;

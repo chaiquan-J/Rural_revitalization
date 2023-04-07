@@ -77,6 +77,7 @@
                 background: item.url,
                 backgroundSize: item.backsize,
                 backgroundPosition: item.backposi,
+                backgroundColor: item.backcolor,
               }"
             ></div>
             <div class="text_box">
@@ -98,20 +99,29 @@
 import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 // 导入图片
+// 产业发展
 import developimg1 from "@/assets/img/developimg1.jpg";
 import developimg2 from "@/assets/img/developimg2.png";
 import developimg3 from "@/assets/img/developimg3.jpeg";
 import developimg4 from "@/assets/img/developimg4.jpg";
+// 轮播
 import swiperimg1 from "@/assets/img/bg-banner6.jpg";
 import swiperimg2 from "@/assets/img/bg-banner7.jpg";
 import swiperimg3 from "@/assets/img/bg-banner8.jpg";
 import swiperimg4 from "@/assets/img/bg-banner9.jpg";
-import talentimg1 from "@/assets/img/weifuan.png";
-import talentimg2 from "@/assets/img/zhengxin.png";
+// 乡村文化
 import cultureimg1 from "@/assets/img/dalangwu.jpg";
 import cultureimg2 from "@/assets/img/huachaojie.jpg";
 import cultureimg3 from "@/assets/img/jinshanjie.jpg";
 import cultureimg4 from "@/assets/img/nongdongjie.jpg";
+// 人才引进
+import talentimg1 from "@/assets/img/weifuan.png";
+// import talentimg2 from "@/assets/img/zhengxin.png";
+// import talentimg3 from "@/assets/img/lujiechun.png";
+import talentimg4 from "@/assets/img/qinchenghua.jpg";
+import talentimg5 from "@/assets/img/nongxingguang.jpg";
+import talentimg6 from "@/assets/img/yangqi.jpg";
+import talentimg7 from "@/assets/img/liuyingjun.jpg";
 
 export default {
   name: "carrousel",
@@ -208,28 +218,24 @@ export default {
           backsize: "cover",
           // 调整图片位置
           backposi: "40% 0%",
-          src: "XXXXXXXX",
         },
         {
           id: 2,
           url: "url(" + cultureimg2 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "60% 0%",
-          src: "XXXXXXXX",
         },
         {
           id: 3,
           url: "url(" + cultureimg3 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "40% 0%",
-          src: "XXXXXXXX",
         },
         {
           id: 4,
           url: "url(" + cultureimg4 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "40% 0%",
-          src: "XXXXXXXX",
         },
       ],
       // 人才引进
@@ -240,63 +246,44 @@ export default {
           url: "url(" + talentimg1 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "0% 0%",
+          backcolor: "#f2f2f2",
           text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
         },
         {
           id: 2,
-          name: "韦福安",
-          url: "url(" + talentimg2 + ")" + " no-repeat",
+          name: "覃承华",
+          url: "url(" + talentimg4 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "0% 0%",
-          text: "郑欣是崇左市科学技术情报研究所办公室副主任。作为一名党员干部，她主动担当作为，在担任江州区江州镇保安村第一书记期间，投身脱贫攻坚一线，带领全村党员干部和广大群众奋勇拼搏、攻坚克难，打造出抓党建促脱贫攻坚、乡村振兴、基层治理的示范品牌——“叫豆经验”，实现驻点村脱贫摘帽，并通过建立公众参与的乡村治理体系帮助驻点村摘得“全国乡村治理示范村”的称号。她数年如一日，兢兢业业地投入到科技服务工作中，贯彻落实创新驱动发展战略，推动科技振兴工作提速增效，协调、保障各项工作执行，助力边疆民族地区科技振兴。",
+          backcolor: "#f2f2f2",
+          text: "2006年以来，发表与文学评论和教育教学相关的学术论文70余篇，出版学术专著2部。多次获得广西民族师范学院优秀教学成果奖、优秀科研成果奖一等奖、二等奖、三等奖等多项奖励。2016年，获得崇左市第二届优秀社会科学成果奖著作类三等奖（其中一、二等奖空缺）。在专业贡献方面，目前担任校级一流专业英语专业负责人，被广西民族大学、闽南师范大学等高校聘为兼职硕士研究生导师。",
         },
         {
           id: 3,
-          name: "韦福安",
-          url: "url(" + talentimg1 + ")" + " no-repeat",
+          name: "农星光",
+          url: "url(" + talentimg5 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "0% 0%",
-          text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
+          backcolor: "#f2f2f2",
+          text: "目前为艺术学院艺术学科带头人。长期担任《声乐》《合唱与指挥》课程教学。创造性地把地方民族音乐元素运用于教学，把广西地方戏曲、壮族多声部山歌与学校课堂教学联系起来开展教学，促进理论与实践的渗透和互动。主持了省级科研项目2项；主持校级教材项目、科研项目、教改项目多项；参与地厅级科研项目10余项。积极为地方文化和经济社会服务。",
         },
         {
           id: 4,
-          name: "韦福安",
-          url: "url(" + talentimg1 + ")" + " no-repeat",
+          name: "杨琪",
+          url: "url(" + talentimg6 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "0% 0%",
-          text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
+          backcolor: "#f2f2f2",
+          text: "任自治区教育厅基础教育教学指导委员会特聘专家、南宁师范大学硕士研究生导师、中国合唱协会会员、广西音乐家协会会员、广西音乐家协会合唱联盟理事。曾获2019年自治区级教学成果二等奖；主持广西教育科学规划2021年度专项课题；自治区党委统战部、自治区党委教育工委2021年度统战理论政策研究课题。指导学生个人和广西民族师范学院合唱团参加“孔雀奖”全国艺术院校声乐大赛、“红铜鼓”中国-东盟艺术教育成果展演、全区大学生艺术展演等国家级、省部级各类比赛20余项，其中获得一等奖4项、二等奖3项、三等奖5项，优秀作品奖3项，区级以上优秀指导教师2项。指导学生参加广西民族师范学院校级各类声乐大赛获一等奖9人次。指导学生举办毕业音乐会7场，师生音乐会1场。",
         },
         {
           id: 5,
-          name: "韦福安",
-          url: "url(" + talentimg1 + ")" + " no-repeat",
+          name: "刘应军",
+          url: "url(" + talentimg7 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "0% 0%",
-          text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
-        },
-        {
-          id: 6,
-          name: "韦福安",
-          url: "url(" + talentimg1 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "0% 0%",
-          text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
-        },
-        {
-          id: 7,
-          name: "韦福安",
-          url: "url(" + talentimg1 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "0% 0%",
-          text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
-        },
-        {
-          id: 8,
-          name: "韦福安",
-          url: "url(" + talentimg1 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "0% 0%",
-          text: "曾任历史文化与旅游学院院长，任职期间，长期负责学科专业建设与科研服务地方等工作。在专业建设方面：任广西高校本科旅游管理专业教学指导委员会委员。完成自治区优势特色专业建设项目（旅游管理），完成自治区重点培育学科（旅游管理）建设项目；旅游管理专业被列入自治区硕点建设项目；主持的“三本位、四融通：旅游管理专业人才培养路径创新与实践”获2019年自治区教学成果二等奖；旅游管理专业2019年列入自治区一流专业。",
+          backcolor: "#f2f2f2",
+          text: "广西美术家协会、广西工笔画学会会员、崇左市美术家协会副秘书长、广西中国画学会理事。在实践教学的基础上不断提升自身绘画功底，加强各种绘画技能的探索，也参加了全国各种展览取得了较好的成效，取得如下成果：作品《百花齐放》荣获第五届东北亚国际书画摄影展铜奖（中国美术家协会、中国书法家协会主办）；",
         },
       ],
     };

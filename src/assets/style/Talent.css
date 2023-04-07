@@ -62,6 +62,11 @@
   margin-top: 15px;
   margin-left: 15px;
   box-shadow: 0px 5px 20px #000;
+  overflow: hidden;
+}
+.body_box .conent .con_box .left_box .img_box {
+  height: 100%;
+  width: 100%;
 }
 .body_box .conent .con_box .right_box {
   height: 765px;
@@ -76,11 +81,11 @@
   font-size: 30px;
   font-weight: bold;
   margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .body_box .conent .con_box .right_box p:nth-child(2) {
   word-break: break-all;
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 25px;
+  padding: 15px;
+  white-space: pre-wrap;
 }

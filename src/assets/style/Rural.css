@@ -25,7 +25,7 @@
   height: 350px;
   width: 1650px;
   margin: 0 auto;
-  background-color: #dddddd76;
+  background-color: #dddddd00;
   text-align: center;
   margin-top: 30px;
   border-radius: 10px;
@@ -71,9 +71,11 @@
 .body_box .conent .con_box .right_box .title_name {
   font-size: 50px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #00ab25;
 }
 .body_box .conent .con_box .right_box .text_box {
   word-break: break-all;
   font-size: 20px;
+  white-space: pre-wrap;
 }

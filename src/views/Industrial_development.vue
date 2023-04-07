@@ -47,7 +47,11 @@
             </div>
             <div class="con_item">
               <div class="img_box">
-                <el-image style="height: 100%; width: 100%" fit="cover">
+                <el-image
+                  :src="item.src"
+                  style="height: 100%; width: 100%"
+                  fit="cover"
+                >
                   <div slot="error" class="image-slot">
                     <i class="el-icon-picture-outline"></i>
                   </div>
@@ -64,6 +68,9 @@
 <script>
 import headimg from "../assets/img/bg-banner7.jpg";
 import developimg1 from "@/assets/img/developimg5.jpg";
+import developimg2 from "@/assets/img/developimg6.jpg";
+import developimg3 from "@/assets/img/developimg7.png";
+import developimg4 from "@/assets/img/developimg8.jpeg";
 
 export default {
   data() {
@@ -74,28 +81,28 @@ export default {
           direction: 1,
           src: developimg1,
           title_text: "特色产业兴起来 村容村貌美起来",
-          text: "在那逐屯便民活动中心文化广场前面，那逐屯、板仲屯和那坡屯有200余亩耕地提质改造（旱改水项目）地块种植着大片水稻，绿油油的秧苗长势喜人，勾勒着稻田好光景。村民马大新感慨地说：“实施‘旱改水’工程后，农田变得好看了，稻谷产量也高了，真是好啊！”那逐屯共52户193人，全屯耕地面积104.29亩，人均耕地面积少。实施旱改水项目以前，该屯水田分布零散、高低落差大，缺少灌溉条件。\n2020年，那逐屯通过优化调整产业结构实施旱改水项目后，水田得到有效整合。田成方、路相连、渠相通，灌溉能力得到了很大提升。\n外加那逐屯地理优势，一年四季均有山泉水流进水田，水稻产量连年攀升。在那逐屯入口左侧，有一片5亩大的水塘。池水清澈见底，一群鸭子在水面上闲游，鱼儿、虾儿在水底怡然自得，山间泉水流入池塘，再经环屯沟渠流进旱改水田。“池塘的鱼由山泉水养大，肉质细腻，口感鲜美清甜，崇左以及南宁、百色等地都有人慕名前来采购，十分畅销。”韦志胜说，村里正在谋划发展山泉水养鱼产业，扩大养殖规模，做活“鱼”文章，以“经联社+农户”的模式，探索发展壮大村级集体经济的新路子，为乡村振兴注入新活力。",
+          text: "   在那逐屯便民活动中心文化广场前面，那逐屯、板仲屯和那坡屯有200余亩耕地提质改造（旱改水项目）地块种植着大片水稻，绿油油的秧苗长势喜人，勾勒着稻田好光景。村民马大新感慨地说：“实施‘旱改水’工程后，农田变得好看了，稻谷产量也高了，真是好啊！”那逐屯共52户193人，全屯耕地面积104.29亩，人均耕地面积少。实施旱改水项目以前，该屯水田分布零散、高低落差大，缺少灌溉条件。\n    2020年，那逐屯通过优化调整产业结构实施旱改水项目后，水田得到有效整合。田成方、路相连、渠相通，灌溉能力得到了很大提升。外加那逐屯地理优势，一年四季均有山泉水流进水田，水稻产量连年攀升。在那逐屯入口左侧，有一片5亩大的水塘。池水清澈见底，一群鸭子在水面上闲游，鱼儿、虾儿在水底怡然自得，山间泉水流入池塘，再经环屯沟渠流进旱改水田。“池塘的鱼由山泉水养大，肉质细腻，口感鲜美清甜，崇左以及南宁、百色等地都有人慕名前来采购，十分畅销。”韦志胜说，村里正在谋划发展山泉水养鱼产业，扩大养殖规模，做活“鱼”文章，以“经联社+农户”的模式，探索发展壮大村级集体经济的新路子，为乡村振兴注入新活力。",
         },
         {
           id: 2,
           direction: 0,
-          src: "img",
-          title_text: "XXXX",
-          text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          src: developimg2,
+          title_text: "基础教育呈现新面貌 发展水平跃上新台阶",
+          text: "   崇左市坚持以培养能够担当民族复兴大任的时代新人为崇高使命，以推进公平发展、质量提升为中心任务，教育改革取得新的突破，教育整体水平进一步提升，人民群众教育获得感不断增强。在崇左市机关保育院，孩子们在老师的带领下，有的在操场上赛跑，有的围坐在草地里玩游戏，有的在水池边捞鱼，有的则在给自己亲手栽种的菜苗浇水施肥。作为自治区示范性幼儿园，崇左市机关保育院主动开展园本课程改革的探索和实践，充分满足游戏化背景下园本课程的建构与实施要求，引发幼儿对本土文化的兴趣，萌发热爱家乡的美好情感，培养乐于探究、自主合作、富有个性的健康儿童，促进儿童全面和谐发展。\n    近年来，崇左市大力实施教育“双百工程”，累计投入25.54亿元，实施教育项目1601个，全市新增初中学校7所、普通高中6所、幼儿园174所，新增学位3.5万个。目前，崇左市基础教育学校办学条件达到基本要求，教育信息化实现了学校宽带网络全覆盖，网络教学全面普及，7个县（市、区）通过了县域义务教育基本均衡国家督导评估验收，成为广西第三个整体通过国家评估验收的地级市。",
         },
         {
           id: 3,
           direction: 1,
-          src: "img",
-          title_text: "XXXX",
-          text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          src: developimg3,
+          title_text: "用心用情用力惠民生",
+          text: "   医疗保障工作涉及千家万户，事关人民群众切身利益。我市始终牢固树立推动全民参保、守护全民健康的理念，把基本医疗保障依法覆盖全民作为一项基础性工作，落实参保动员责任，积极动员参保缴费，保质保量完成目标任务，全力保障参保人员权益。\n   2019年以来，我市基本医疗保险参保人数稳定在240万人以上，全市基本医疗保险参保率多年稳定在97%，基本实现了参保全覆盖，有力地保障了全市人民身体健康。\n   今年以来，我市各级医疗保障部门继续巩固全民参保取得的成果，以保障群众健康为根本，紧盯重点人群，加强数据比对，健全动态监测机制。尤其是近年来，我市加快健全保障体系，通过实施医疗救助精细化管理，加强部门间信息共享和数据比对，提高医保精准度，增强针对性，最大力度确保农村低收入人口和脱贫人口应保尽保。与此同时，我市加强待遇保障，认真落实基本医保、大病保险、医疗救助“三重保障”政策，通过大病保险倾斜性支付、医疗救助托底保障功能等措施，切实减轻特殊困难群体就医负担，有效防止因病致贫、因病返贫，为巩固拓展脱贫攻坚成果同乡村振兴有效衔接贡献了医保力量。",
         },
         {
           id: 4,
           direction: 0,
-          src: "img",
-          title_text: "XXXX",
-          text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          src: developimg4,
+          title_text: "我们走过的五年",
+          text: "回顾过去，展望未来，让我们一起看看，崇左文化旅游走过的这五年：\n   产业规模稳步增长。文化旅游品牌创建扎实推进，崇左市成功创建国家5A级旅游景区1家、国家4A级旅游景区18家、国家3A级旅游景区15家，国家生态旅游示范区1家、广西生态旅游示范区6家，自治区级旅游度假区2家，五星级广西星级乡村旅游区（点）1家、四星级广西星级乡村旅游区（点）21家、三星级广西星级乡村旅游区（点）6家，广西五星级农家乐2家、广西四星级农家乐9家、广西三星级农家乐21家，21家星级旅游饭店和一批精品民宿。\n    文艺创作和文化旅游交流成果丰硕。崇左市深入开展文艺精品作品创作，在大型舞台剧目方面取得新突破。《骆越•天传》成功上演，填补了崇左市没有驻场演出的空白，大型壮族神话实景剧《花山》形成常态化演出，并获评广西“十佳夜间演艺”。此外20个精心创作的特色文艺作品在全国、全区重大文艺赛事展览等活动中取得了优异成绩。\n   公共服务体系逐步完善。全市旅游公共服务体系日益完善，旅游集散和旅游咨询体系逐渐形成。“旅游厕所革命”成效显著，累计新建和改造旅游厕所共201座；汽车营地建设取得新进展，建成汽车旅游营地7个。全市旅游交通标识系统建设逐步完善，在合那高速公路、南友高速公路及各县主要交通公路共设置旅游交通标识牌1269块。智慧旅游平台建设初见成效，“一键游崇左”智慧旅游平台正式上线运行，并有35个商家进驻，“广西全域旅游直通车”平台完成47个租车还车网点建设等等任务。",
         },
       ],
       imgurl: {
