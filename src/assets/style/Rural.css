@@ -25,11 +25,9 @@
   height: 350px;
   width: 1650px;
   margin: 0 auto;
-  background-color: #dddddd00;
   text-align: center;
   margin-top: 30px;
   border-radius: 10px;
-  box-shadow: 0px 5px 20px #000;
 }
 .body_box .conent .introduce .title_1 {
   height: auto;
