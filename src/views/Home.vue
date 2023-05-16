@@ -24,7 +24,7 @@
       <!-- 乡村发展 -->
       <div class="develop_box">
         <div class="title_box">
-          <span>乡村发展</span>
+          <router-link to="/Industrial" class="more">乡村发展</router-link>
         </div>
         <div class="conent_box">
           <div class="con_box" v-for="item in developimg" :key="item.id">
@@ -35,21 +35,24 @@
                 backgroundSize: item.backsize,
                 backgroundPosition: item.backposi,
               }"
-            ></div>
-            <div class="name_box">{{ item.text }}</div>
+            >
+              <div class="name_box">{{ item.text }}</div>
+            </div>
           </div>
         </div>
-        <div class="see_more">
-          <router-link to="/Industrial" class="more">查看更多>></router-link>
-        </div>
+        <!-- <div class="see_more">
+          <router-link to="/Industrial" class="more"
+            >查看更多<i class="el-icon-d-arrow-right"></i
+          ></router-link>
+        </div> -->
       </div>
       <!-- 乡村文化传承 -->
       <div class="culture_box">
         <div class="title_box">
-          <span>乡村文化</span>
+          <router-link to="/Rural" class="more">乡村文化</router-link>
         </div>
         <div class="conent_box">
-          <div class="con_box" v-for="item in cultureimg" :key="item.id">
+          <!-- <div class="con_box" v-for="item in cultureimg" :key="item.id">
             <div
               class="img_box"
               :style="{
@@ -58,16 +61,42 @@
                 backgroundPosition: item.backposi,
               }"
             ></div>
-          </div>
+          </div> -->
+          <el-carousel
+            :interval="4000"
+            type="card"
+            height="500px"
+            class="culture-swiper"
+            trigger="click"
+            indicator-position="none"
+          >
+            <el-carousel-item v-for="item in cultureimg" :key="item.id">
+              <!-- <div
+                class="img_box"
+                :style="{
+                  background: item.url,
+                  backgroundSize: item.backsiza,
+                  backgroundPosition: item.backposi,
+                }"
+              ></div> -->
+              <el-image
+                style="width: 100%; height: 100%"
+                :src="item.url"
+                :preview-src-list="item.srcList"
+                :fit="item.fit"
+              >
+              </el-image>
+            </el-carousel-item>
+          </el-carousel>
         </div>
-        <div class="see_more">
+        <!-- <div class="see_more">
           <router-link to="/Rural" class="more">查看更多>></router-link>
-        </div>
+        </div> -->
       </div>
       <!-- 乡村人才引进 -->
       <div class="talent_box">
         <div class="title_box">
-          <span>人才引进</span>
+          <router-link to="/Talent" class="more">人才引进</router-link>
         </div>
         <div class="conent_box">
           <div class="con_box" v-for="item in talent" :key="item.id">
@@ -86,9 +115,9 @@
             </div>
           </div>
         </div>
-        <div class="see_more">
+        <!-- <div class="see_more">
           <router-link to="/Talent" class="more">查看更多>></router-link>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -104,6 +133,7 @@ import developimg1 from "@/assets/img/developimg1.jpg";
 import developimg2 from "@/assets/img/developimg2.png";
 import developimg3 from "@/assets/img/developimg3.jpeg";
 import developimg4 from "@/assets/img/developimg4.jpg";
+import developimg9 from "@/assets/img/developimg9.png";
 // 轮播
 import swiperimg1 from "@/assets/img/bg-banner6.jpg";
 import swiperimg2 from "@/assets/img/bg-banner7.jpg";
@@ -121,7 +151,7 @@ import talentimg1 from "@/assets/img/weifuan.png";
 import talentimg4 from "@/assets/img/qinchenghua.jpg";
 import talentimg5 from "@/assets/img/nongxingguang.jpg";
 import talentimg6 from "@/assets/img/yangqi.jpg";
-import talentimg7 from "@/assets/img/liuyingjun.jpg";
+// import talentimg7 from "@/assets/img/liuyingjun.jpg";
 
 export default {
   name: "carrousel",
@@ -185,57 +215,76 @@ export default {
           src: "url(" + developimg2 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "center",
-          text: "产业",
+          text: "产业振兴",
         },
         {
           id: 2,
-          src: "url(" + developimg3 + ")" + " no-repeat",
+          src: "url(" + developimg9 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "50% 0%",
-          text: "教育",
+          text: "农业发展",
         },
         {
           id: 3,
-          src: "url(" + developimg4 + ")" + " no-repeat",
+          src: "url(" + developimg3 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "50% 0%",
-          text: "医疗",
+          text: "改善教育",
         },
         {
           id: 4,
+          src: "url(" + developimg4 + ")" + " no-repeat",
+          backsize: "cover",
+          backposi: "50% 0%",
+          text: "医疗振兴",
+        },
+        {
+          id: 5,
           src: "url(" + developimg1 + ")" + " no-repeat",
           backsize: "cover",
           backposi: "50% 0%",
-          text: "旅游",
+          text: "文旅创新",
         },
       ],
       // 乡村文化
       cultureimg: [
         {
           id: 1,
-          url: "url(" + cultureimg1 + ")" + " no-repeat",
+          url: cultureimg1,
+          srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
+          fit: "cover",
+          // url: "url(" + cultureimg1 + ")" + " no-repeat",
           // 调整图片大小
-          backsize: "cover",
+          // backsize: "cover",
           // 调整图片位置
-          backposi: "40% 0%",
+          // backposi: "40% 0%",
         },
         {
           id: 2,
-          url: "url(" + cultureimg2 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "60% 0%",
+          url: cultureimg2,
+          srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
+          fit: "cover",
+          // url: "url(" + cultureimg2 + ")" + " no-repeat",
+          // backsize: "cover",
+          // backposi: "60% 0%",
         },
         {
           id: 3,
-          url: "url(" + cultureimg3 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "40% 0%",
+          url: cultureimg3,
+          srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
+          fit: "cover",
+          // url: "url(" + cultureimg3 + ")" + " no-repeat",
+          // backsize: "cover",
+          // backposi: "40% 0%",
         },
         {
           id: 4,
-          url: "url(" + cultureimg4 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "40% 0%",
+          url: cultureimg4,
+          srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
+          fit: "cover",
+          // url: "url(" + cultureimg4 + ")" + " no-repeat",
+          // backsize: "cover",
+          // backposi: "40% 0%",
         },
       ],
       // 人才引进
@@ -275,15 +324,6 @@ export default {
           backposi: "0% 0%",
           backcolor: "#f2f2f2",
           text: "任自治区教育厅基础教育教学指导委员会特聘专家、南宁师范大学硕士研究生导师、中国合唱协会会员、广西音乐家协会会员、广西音乐家协会合唱联盟理事。曾获2019年自治区级教学成果二等奖；主持广西教育科学规划2021年度专项课题；自治区党委统战部、自治区党委教育工委2021年度统战理论政策研究课题。指导学生个人和广西民族师范学院合唱团参加“孔雀奖”全国艺术院校声乐大赛、“红铜鼓”中国-东盟艺术教育成果展演、全区大学生艺术展演等国家级、省部级各类比赛20余项，其中获得一等奖4项、二等奖3项、三等奖5项，优秀作品奖3项，区级以上优秀指导教师2项。指导学生参加广西民族师范学院校级各类声乐大赛获一等奖9人次。指导学生举办毕业音乐会7场，师生音乐会1场。",
-        },
-        {
-          id: 5,
-          name: "刘应军",
-          url: "url(" + talentimg7 + ")" + " no-repeat",
-          backsize: "cover",
-          backposi: "0% 0%",
-          backcolor: "#f2f2f2",
-          text: "广西美术家协会、广西工笔画学会会员、崇左市美术家协会副秘书长、广西中国画学会理事。在实践教学的基础上不断提升自身绘画功底，加强各种绘画技能的探索，也参加了全国各种展览取得了较好的成效，取得如下成果：作品《百花齐放》荣获第五届东北亚国际书画摄影展铜奖（中国美术家协会、中国书法家协会主办）；",
         },
       ],
     };

@@ -46,13 +46,17 @@ export default {
  * 主体box
  */
 .nav_bar {
-  height: 90px;
+  height: 75px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  /**
   background-color: #6d0f0f;
+   * 
+   */
+  background-color: #444444;
   font-weight: bold;
   font-size: 20px;
   position: relative;
@@ -71,7 +75,8 @@ export default {
   .logo_box {
     display: flex;
     flex-direction: row;
-    color: #f1ff56;
+    font-family: sjkt;
+    color: #ffde00ff;
 
     :nth-child(2) {
       color: #00ab25;
@@ -91,7 +96,7 @@ export default {
     .router_item {
       height: 100%;
       width: 130px;
-      line-height: 90px;
+      line-height: 75px;
       text-align: center;
 
       .link_btn {
@@ -103,11 +108,11 @@ export default {
       }
 
       .active {
-        color: #f1ff56;
+        color: #fff;
       }
 
       :hover {
-        color: #f1ff56;
+        color: #ffde00ff;
       }
     }
   }

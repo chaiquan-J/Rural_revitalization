@@ -10,6 +10,10 @@ Vue.use(ElementUI);
 // swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'//引入样式
+
+// 引入字体
+import '@/assets/font/font.css'
+
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 Vue.config.productionTip = false

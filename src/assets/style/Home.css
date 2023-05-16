@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
 }
 .body_box .swiper_box {
-  height: 800px;
+  height: 1000px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -42,26 +42,15 @@
 .body_box .title_box {
   height: auto;
   width: auto;
-  font-size: 50px;
-  margin-top: 90px;
-  margin-bottom: 110px;
-  color: #00ab25;
+  font-size: 45px;
+  margin-top: 100px;
+  margin-bottom: 60px;
   font-weight: bold;
+  font-family: sjkt;
 }
-.body_box .see_more {
-  height: auto;
-  width: auto;
-  margin-bottom: 80px;
-}
-.body_box .see_more .more {
-  font-size: 35px;
-  color: #00ab25;
+.body_box .title_box .more {
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.5s;
-}
-.body_box .see_more :hover {
-  color: #6d0f0f;
+  color: #00ab25;
 }
 .body_box .develop_box {
   height: auto;
@@ -74,27 +63,18 @@
 }
 .body_box .develop_box .conent_box {
   height: auto;
-  width: 1650px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
 }
-.body_box .develop_box .conent_box .con_box:hover {
-  box-shadow: 10px 20px 30px #000000;
-}
-.body_box .develop_box .conent_box .con_box:hover .name_box {
-  top: 1600px;
-  opacity: 1;
-}
 .body_box .develop_box .conent_box .con_box {
-  height: 650px;
-  width: 350px;
+  height: 887px;
+  width: 20%;
   background-color: #ffffff;
   border-radius: 10px;
   transition: all 0.5s;
-  box-shadow: 0px 5px 10px #000000;
-  overflow: hidden;
 }
 .body_box .develop_box .conent_box .con_box .img_box {
   height: 100%;
@@ -102,31 +82,28 @@
   background-color: #000;
 }
 .body_box .develop_box .conent_box .con_box .name_box {
-  height: 85px;
-  width: 350px;
+  height: 100%;
+  width: 100%;
   background-color: #00000071;
   color: #fff;
   text-align: center;
-  line-height: 85px;
-  position: absolute;
-  top: 1720px;
-  opacity: 0;
-  transition: all 0.5s;
-  z-index: 1;
-  font-size: 30px;
+  line-height: 900px;
+  font-size: 40px;
   font-weight: bold;
+  margin: 0 auto;
 }
 .body_box .develop_box .see_more {
-  margin-top: 80px;
+  margin-top: 120px;
 }
 .body_box .culture_box {
-  height: auto;
+  height: 880px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-size: cover;
+  background-color: #eee;
 }
 .body_box .culture_box .conent_box {
   height: auto;
@@ -136,9 +113,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
-}
-.body_box .culture_box .conent_box .con_box:hover {
-  box-shadow: 10px 10px 20px #000000;
 }
 .body_box .culture_box .conent_box .con_box {
   height: 450px;
@@ -169,11 +143,18 @@
   font-size: 30px;
   font-weight: bold;
 }
-.body_box .culture_box .see_more {
-  margin-top: 80px;
+.body_box .culture_box .conent_box .culture-swiper {
+  width: 1800px;
+  margin: 0 auto;
+}
+.body_box .culture_box .conent_box .culture-swiper .img_box {
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 10px;
 }
 .body_box .talent_box {
-  height: auto;
+  height: 950px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -181,12 +162,9 @@
   align-items: center;
   background-size: cover;
 }
-.body_box .talent_box .title_box {
-  margin-bottom: 120px;
-}
 .body_box .talent_box .conent_box {
   height: auto;
-  width: 1700px;
+  width: 1780px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -198,24 +176,19 @@
   box-shadow: 10px 10px 20px #000000;
 }
 .body_box .talent_box .conent_box .con_box {
-  height: 450px;
-  width: 300px;
+  height: 560px;
+  width: 400px;
   background-color: #fff;
-  margin-bottom: 60px;
-  padding: 5px;
-  border-radius: 10px;
   transition: all 0.5s;
-  box-shadow: 0px 5px 10px #000000;
   margin-bottom: 50px;
 }
 .body_box .talent_box .conent_box .con_box .img_box {
-  height: 270px;
+  height: 435px;
   width: 100%;
   background-color: #000;
   background-repeat: no-repeat;
   background-position: 0% 0%;
   background-size: cover;
-  border-radius: 10px;
   overflow: hidden;
 }
 .body_box .talent_box .conent_box .con_box .text_box {
@@ -224,24 +197,23 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
 }
 .body_box .talent_box .conent_box .con_box .text_box .name_box {
   height: auto;
   width: auto;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: 20px;
 }
 .body_box .talent_box .conent_box .con_box .text_box .text_body {
-  height: 100px;
+  height: 65px;
   width: 95%;
-  padding: 5px;
   display: -webkit-box;
   word-break: break-all;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin: 0 auto;
 }

@@ -19,8 +19,8 @@
 
     // 轮播
     .swiper_box {
-        // height: 1207px;
-        height: 800px;
+        // height: 1210px;
+        height: 1000px;
         width: 100%;
         display: flex;
         // color: white;
@@ -74,32 +74,37 @@
     .title_box {
         height: auto;
         width: auto;
-        font-size: 50px;
-        margin-top: 90px;
-        margin-bottom: 110px;
-        color: #00ab25;
+        font-size: 45px;
+        margin-top: 100px;
+        margin-bottom: 60px;
         font-weight: bold;
+        font-family: sjkt;
+
+        .more {
+            text-decoration: none;
+            color: #00ab25;
+        }
     }
 
     // 查看更多
-    .see_more {
-        height: auto;
-        width: auto;
-        // background-color: #000;
-        margin-bottom: 80px;
+    // .see_more {
+    //     height: 100px;
+    //     width: 200px;
+    //     background-color: #000;
+    //     margin-bottom: 80px;
 
-        .more {
-            font-size: 35px;
-            color: #00ab25;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.5s;
-        }
+    //     .more {
+    //         font-size: 35px;
+    //         color: #00ab25;
+    //         text-decoration: none;
+    //         font-weight: bold;
+    //         transition: all 0.5s;
+    //     }
 
-        :hover {
-            color: #6d0f0f;
-        }
-    }
+    //     :hover {
+    //         color: #ffffff;
+    //     }
+    // }
 
 
     // 乡村发展
@@ -113,34 +118,32 @@
         background-size: cover;
         // background-color: #24db73;
 
-
         //内容盒子
         .conent_box {
             height: auto;
-            width: 1650px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: start;
 
+            // .con_box:hover {
+            //     box-shadow: 10px 20px 30px #000000;
 
-            .con_box:hover {
-                box-shadow: 10px 20px 30px #000000;
-
-                .name_box {
-                    top: 1600px;
-                    opacity: 1;
-                }
-            }
+            //     .name_box {
+            //         top: 1600px;
+            //         opacity: 1;
+            //     }
+            // }
 
             .con_box {
-                height: 650px;
-                width: 350px;
+                height: 887px;
+                width: 20%;
                 background-color: #ffffff;
                 border-radius: 10px;
                 transition: all 0.5s;
-                box-shadow: 0px 5px 10px #000000;
-                overflow: hidden;
+                // box-shadow: 0px 5px 10px #000000;
+                // overflow: hidden;
 
                 .img_box {
                     height: 100%;
@@ -149,40 +152,35 @@
                 }
 
                 .name_box {
-                    height: 85px;
-                    width: 350px;
+                    height: 100%;
+                    width: 100%;
                     background-color: #00000071;
                     color: #fff;
                     text-align: center;
-                    line-height: 85px;
-                    position: absolute;
-                    top: 1720px;
-                    opacity: 0;
-                    transition: all 0.5s;
-                    z-index: 1;
-                    font-size: 30px;
+                    line-height: 900px;
+                    font-size: 40px;
                     font-weight: bold;
+                    margin: 0 auto;
                 }
             }
         }
 
         .see_more {
-            margin-top: 80px;
+            margin-top: 120px;
         }
     }
 
 
     //乡村文化
     .culture_box {
-        height: auto;
+        height: 880px;
         width: 100%;
         display: flex;
-        // color: white;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         background-size: cover;
-        // background-color: #24cfdb;
+        background-color: #eee;
 
 
         //内容盒子
@@ -194,10 +192,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: start;
-
-            .con_box:hover {
-                box-shadow: 10px 10px 20px #000000;
-            }
 
             .con_box {
                 height: 450px;
@@ -232,32 +226,35 @@
                     }
                 }
             }
+
+            .culture-swiper {
+                width: 1800px;
+                margin: 0 auto;
+
+                .img_box {
+                    height: 100%;
+                    width: 100%;
+                    background-color: #FFF;
+                    border-radius: 10px;
+                }
+            }
         }
 
-        .see_more {
-            margin-top: 80px;
-        }
     }
 
     //  人才引进
     .talent_box {
-        height: auto;
+        height: 950px;
         width: 100%;
         display: flex;
-        // color: white;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         background-size: cover;
-        // background-color: #ffb52b;
-
-        .title_box {
-            margin-bottom: 120px;
-        }
 
         .conent_box {
             height: auto;
-            width: 1700px;
+            width: 1780px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -270,26 +267,23 @@
             }
 
             .con_box {
-                height: 450px;
-                width: 300px;
+                height: 560px;
+                width: 400px;
                 background-color: #fff;
-                margin-bottom: 60px;
-                padding: 5px;
-                border-radius: 10px;
+                // padding: 5px;
                 transition: all 0.5s;
-                // border: 1px solid #f5f5f5;
-                box-shadow: 0px 5px 10px #000000;
+                // box-shadow: 0px 5px 10px #000000;
                 margin-bottom: 50px;
 
                 .img_box {
-                    height: 270px;
+                    height: 435px;
                     width: 100%;
                     background-color: #000;
                     // background: url(../img/weifuan.png) no-repeat;
                     background-repeat: no-repeat;
                     background-position: 0% 0%;
                     background-size: cover;
-                    border-radius: 10px;
+                    // border-radius: 10px;
                     overflow: hidden;
                 }
 
@@ -300,29 +294,30 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
-                    align-items: center;
+                    // align-items: center;
 
                     .name_box {
                         height: auto;
                         width: auto;
-                        font-size: 25px;
-                        font-weight: bold;
+                        font-size: 20px;
                         margin-top: 10px;
                         margin-bottom: 10px;
+                        margin-left: 20px;
                     }
 
                     .text_body {
-                        height: 100px;
+                        height: 65px;
                         width: 95%;
-                        padding: 5px;
+                        // padding: 5px;
                         // background-color: #afa6ff;
                         //  文本换行
                         display: -webkit-box;
                         word-break: break-all;
                         -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 5;
+                        -webkit-line-clamp: 3;
                         text-overflow: ellipsis;
                         overflow: hidden;
+                        margin: 0 auto;
                     }
                 }
             }

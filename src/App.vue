@@ -46,7 +46,7 @@ export default {
 footer {
   height: 170px;
   width: 100%;
-  background-color: #6d0f0f;
+  background-color: #444444;
 
   .foot_box {
     height: 100%;
