@@ -8,8 +8,17 @@
   background-color: #f2f2f2;
   background-repeat: no-repeat;
 }
+.body_box .up_box {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f5f6;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  line-height: 40px;
+  color: #1989fa;
+}
 .body_box .swiper_box {
-  height: 1000px;
+  height: 1200px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -45,7 +54,6 @@
   font-size: 45px;
   margin-top: 100px;
   margin-bottom: 60px;
-  font-weight: bold;
   font-family: sjkt;
 }
 .body_box .title_box .more {
@@ -96,7 +104,7 @@
   margin-top: 120px;
 }
 .body_box .culture_box {
-  height: 880px;
+  height: 800px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -154,7 +162,7 @@
   border-radius: 10px;
 }
 .body_box .talent_box {
-  height: 950px;
+  height: 915px;
   width: 100%;
   display: flex;
   flex-direction: column;

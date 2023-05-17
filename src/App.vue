@@ -1,10 +1,13 @@
 <template>
   <div id="app">
     <!-- 导航栏 -->
-    <!-- <div class="nav_bar">{{ text }}</div> -->
     <navbar></navbar>
     <!-- 路由渲染 -->
     <router-view></router-view>
+    <!-- 返回顶部 -->
+    <el-backtop>
+      <i class="el-icon-caret-top up_box"></i>
+    </el-backtop>
     <!-- 底部 -->
     <footer>
       <div class="foot_box">
@@ -41,6 +44,10 @@ export default {
 * {
   margin: 0;
   padding: 0;
+}
+
+.up_box {
+  color: #20b702;
 }
 
 footer {

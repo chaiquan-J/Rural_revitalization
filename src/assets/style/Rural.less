@@ -25,63 +25,77 @@
             background-size: 100%;
         }
 
+        // 介绍
         .introduce {
-            height: 350px;
+            height: 275px;
             width: 1650px;
             margin: 0 auto;
             // background-color: #dddddd00;
             text-align: center;
-            margin-top: 30px;
+            // margin-bottom: 40px; 
+            margin-top: 15px;
             border-radius: 10px;
             // box-shadow: 0px 5px 20px #000;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
 
             .title_1 {
                 height: auto;
                 width: auto;
                 font-size: 30px;
-                font-weight: bold;
+                // font-weight: bold;
+                font-family: sjkt;
                 margin-top: 60px;
                 color: #00ab25;
-                margin-bottom: 25px;
+                margin-bottom: 20px;
             }
 
             .text_1 {
                 word-break: break-all;
                 padding: 20px;
-                font-size: 20px;
+                font-size: 15px;
             }
         }
 
         .con_box {
-            height: 800px;
-            width: 1850px;
-            background-color: #Fff;
-            margin-top: 50px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: row;
-            box-shadow: 0px 5px 20px #000;
+            height: auto;
+            width: 1550px;
+            // background-color: #9c9c9c;
+
+            // margin-top: 50px;
+            // border-radius: 10px;
+            // box-shadow: 0px 5px 20px #000;
+            .box {
+                display: flex;
+                flex-direction: row;
+            }
 
             .left_box {
-                height: 100%;
-                width: 600px;
+                height: 411px;
+                width: auto;
                 // background-color: #a94141;
-                border-radius: 10px 0px 0px 10px;
-                overflow: hidden;
+                // border-radius: 10px 0px 0px 10px;
+                display: flex;
             }
 
             .right_box {
-                height: 750px;
-                width: 1200px;
+                height: 411px;
+                width: 500px;
                 // background-color: #f4ff94;
-                margin: 0 auto;
-                margin-top: 30px;
+                // margin: 0 auto;
                 text-align: left;
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-right: 40px;
 
                 .title_name {
-                    font-size: 50px;
-                    font-weight: bold;
-                    margin-bottom: 20px;
+                    font-size: 45px;
+                    // font-weight: bold;
+                    font-family: sjkt;
+                    margin-bottom: 10px;
                     color: #00ab25;
                 }
 

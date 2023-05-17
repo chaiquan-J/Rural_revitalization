@@ -2,6 +2,10 @@
 <template>
   <div>
     <div class="body_box">
+      <!-- 返回顶部 -->
+      <!-- <el-backtop>
+        <div class="up_box">UP</div>
+      </el-backtop> -->
       <div class="swiper_box">
         <!-- 轮播图 -->
         <swiper :options="swiperOption" ref="mySwiper" class="swiper_max">
@@ -40,11 +44,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="see_more">
-          <router-link to="/Industrial" class="more"
-            >查看更多<i class="el-icon-d-arrow-right"></i
-          ></router-link>
-        </div> -->
       </div>
       <!-- 乡村文化传承 -->
       <div class="culture_box">
@@ -52,33 +51,15 @@
           <router-link to="/Rural" class="more">乡村文化</router-link>
         </div>
         <div class="conent_box">
-          <!-- <div class="con_box" v-for="item in cultureimg" :key="item.id">
-            <div
-              class="img_box"
-              :style="{
-                background: item.url,
-                backgroundSize: item.backsiza,
-                backgroundPosition: item.backposi,
-              }"
-            ></div>
-          </div> -->
           <el-carousel
             :interval="4000"
             type="card"
             height="500px"
             class="culture-swiper"
             trigger="click"
-            indicator-position="none"
+            indicator-position="outside"
           >
             <el-carousel-item v-for="item in cultureimg" :key="item.id">
-              <!-- <div
-                class="img_box"
-                :style="{
-                  background: item.url,
-                  backgroundSize: item.backsiza,
-                  backgroundPosition: item.backposi,
-                }"
-              ></div> -->
               <el-image
                 style="width: 100%; height: 100%"
                 :src="item.url"

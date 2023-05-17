@@ -4,8 +4,10 @@
     <div class="nav_bar">
       <!-- logo -->
       <div class="logo_box">
-        <h1>崇左</h1>
-        <h1>之窗</h1>
+        <router-link class="link_btn" to="/Home">
+          <span>崇左</span>
+          <span>之窗</span>
+        </router-link>
       </div>
       <!-- 导航 -->
       <div class="router_box">
@@ -75,11 +77,20 @@ export default {
   .logo_box {
     display: flex;
     flex-direction: row;
+    font-size: 40px;
+    font-weight: 100;
     font-family: sjkt;
-    color: #ffde00ff;
 
-    :nth-child(2) {
-      color: #00ab25;
+    .link_btn {
+      text-decoration: none;
+      height: 100%;
+      display: block;
+      color: #ffde00ff;
+      transition: all 0.5s;
+
+      :nth-child(2) {
+        color: #00ab25;
+      }
     }
   }
 

@@ -9,9 +9,9 @@
     width: auto;
 
     .conent {
-        height: auto;
+        height: 100%;
         width: 100%;
-        // background-color: pink;
+        // background-color: #eee;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,29 +28,34 @@
 
         // 介绍
         .introduce {
-            height: 350px;
+            height: 275px;
             width: 1650px;
             margin: 0 auto;
-            // background-color: #dddddd76;
+            // background-color: #dddddd00;
             text-align: center;
-            margin-top: 30px;
+            // margin-bottom: 40px; 
+            margin-top: 15px;
             border-radius: 10px;
             // box-shadow: 0px 5px 20px #000;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
 
             .title_1 {
                 height: auto;
                 width: auto;
                 font-size: 30px;
-                font-weight: bold;
+                // font-weight: bold;
+                font-family: sjkt;
                 margin-top: 60px;
                 color: #00ab25;
-                margin-bottom: 25px;
+                margin-bottom: 20px;
             }
 
             .text_1 {
                 word-break: break-all;
                 padding: 20px;
-                font-size: 20px;
+                font-size: 15px;
             }
         }
 
@@ -65,17 +70,22 @@
             justify-content: flex-start;
             align-items: flex-start;
 
+            .left_box:hover {
+                box-shadow: 0px 5px 20px #000;
+                border-radius: 5px;
+            }
+
             .left_box {
                 height: 550px;
                 width: 530px;
                 // background-color: #990000;
-                // border-radius: 5px;
+                background: url(../img/bgimg.png) no-repeat;
                 margin-top: 15px;
                 margin-left: 15px;
                 margin-bottom: 15px;
-                box-shadow: 0px 5px 20px #000;
                 overflow: hidden;
                 padding: 10px;
+                transition: all 0.5s;
 
                 .img_box {
                     height: 100%;
@@ -85,9 +95,9 @@
             }
 
             .right_box {
-                height: auto;
+                height: 570px;
                 width: 1270px;
-                // background-color: #fff;
+                background-color: #eee;
                 margin-top: 15px;
                 margin-left: 15px;
                 // box-shadow: 0px 5px 20px #000;
@@ -95,11 +105,12 @@
 
                 p:nth-child(1) {
                     font-size: 40px;
-                    font-weight: bold;
+                    // font-weight: bold;
                     margin-top: 25px;
                     // margin-bottom: 10px;
                     margin-left: 30px;
-                    color: #00ab25;
+                    font-family: sjkt;
+                    // color: #00ab25;
                 }
 
                 p:nth-child(2) {
