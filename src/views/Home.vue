@@ -50,7 +50,7 @@
         <div class="title_box">
           <router-link to="/Rural" class="more">乡村文化</router-link>
         </div>
-        <div class="conent_box">
+        <div class="conent_box" style="transition: all 0.5s !important">
           <el-carousel
             :interval="4000"
             type="card"
@@ -58,21 +58,31 @@
             class="culture-swiper"
             trigger="click"
             indicator-position="outside"
+            style="transition: all 0.5s !important"
           >
-            <el-carousel-item v-for="item in cultureimg" :key="item.id">
+            <el-carousel-item
+              v-for="item in cultureimg"
+              :key="item.id"
+              style="transition: all 0.5s !important"
+            >
               <el-image
-                style="width: 100%; height: 100%"
+                class="cul_img"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  transition: all 0.5s !important;
+                "
                 :src="item.url"
                 :preview-src-list="item.srcList"
                 :fit="item.fit"
               >
               </el-image>
+              <div class="culture_name" style="transition: all 0.5s !important">
+                {{ item.name }}
+              </div>
             </el-carousel-item>
           </el-carousel>
         </div>
-        <!-- <div class="see_more">
-          <router-link to="/Rural" class="more">查看更多>></router-link>
-        </div> -->
       </div>
       <!-- 乡村人才引进 -->
       <div class="talent_box">
@@ -96,9 +106,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="see_more">
-          <router-link to="/Talent" class="more">查看更多>></router-link>
-        </div> -->
       </div>
     </div>
   </div>
@@ -234,6 +241,7 @@ export default {
           url: cultureimg1,
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
+          name: "打榔舞",
           // url: "url(" + cultureimg1 + ")" + " no-repeat",
           // 调整图片大小
           // backsize: "cover",
@@ -245,6 +253,7 @@ export default {
           url: cultureimg2,
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
+          name: "花朝节",
           // url: "url(" + cultureimg2 + ")" + " no-repeat",
           // backsize: "cover",
           // backposi: "60% 0%",
@@ -254,6 +263,7 @@ export default {
           url: cultureimg3,
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
+          name: "金山节",
           // url: "url(" + cultureimg3 + ")" + " no-repeat",
           // backsize: "cover",
           // backposi: "40% 0%",
@@ -263,6 +273,7 @@ export default {
           url: cultureimg4,
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
+          name: "侬垌节",
           // url: "url(" + cultureimg4 + ")" + " no-repeat",
           // backsize: "cover",
           // backposi: "40% 0%",

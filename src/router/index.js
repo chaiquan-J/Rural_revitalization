@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Industrial from '../views/Industrial_development.vue'
 import Rural from '../views/Rural_culture.vue'
 import Talent from '../views/Talent.vue'
+import Login from '../views/Login.vue'
+import Enroll from '../views/Enroll.vue'
+
 
 Vue.use(VueRouter)
 
@@ -35,6 +38,18 @@ const routes = [
     path: '/Talent',
     name: 'Talent',
     component: Talent
+  },
+  {
+    // 登录
+    path: '/Login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    // 注册
+    path: '/Enroll',
+    name: 'Enroll',
+    component: Enroll
   },
   // 示例
   // {

@@ -47,7 +47,7 @@
               >
               </el-image>
             </div>
-            <div class="right_box" style="margin-left: 30px">
+            <div class="right_box" style="margin-left: 45px">
               <div class="title_name">{{ conitem.title_text }}</div>
               <div class="text_box">
                 {{ conitem.text }}

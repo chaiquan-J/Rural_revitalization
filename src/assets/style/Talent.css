@@ -35,7 +35,7 @@
 .body_box .conent .introduce .title_1 {
   height: auto;
   width: auto;
-  font-size: 30px;
+  font-size: 35px;
   font-family: sjkt;
   margin-top: 60px;
   color: #00ab25;
@@ -88,6 +88,7 @@
   margin-top: 25px;
   margin-left: 30px;
   font-family: sjkt;
+  color: #00ab25;
 }
 .body_box .conent .con_box .right_box p:nth-child(2) {
   word-break: break-all;
