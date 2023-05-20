@@ -27,9 +27,7 @@ import navbar from "./components/navbar";
 export default {
   // 数据
   data() {
-    return {
-      text: "测试",
-    };
+    return {};
   },
   // 组件
   components: {

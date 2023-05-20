@@ -50,7 +50,7 @@
         <div class="title_box">
           <router-link to="/Rural" class="more">乡村文化</router-link>
         </div>
-        <div class="conent_box" style="transition: all 0.5s !important">
+        <div class="conent_box">
           <el-carousel
             :interval="4000"
             type="card"
@@ -58,20 +58,11 @@
             class="culture-swiper"
             trigger="click"
             indicator-position="outside"
-            style="transition: all 0.5s !important"
           >
-            <el-carousel-item
-              v-for="item in cultureimg"
-              :key="item.id"
-              style="transition: all 0.5s !important"
-            >
+            <el-carousel-item v-for="item in cultureimg" :key="item.id">
               <el-image
                 class="cul_img"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  transition: all 0.5s !important;
-                "
+                style="width: 100%; height: 100%"
                 :src="item.url"
                 :preview-src-list="item.srcList"
                 :fit="item.fit"

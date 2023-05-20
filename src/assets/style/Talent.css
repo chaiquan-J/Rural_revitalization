@@ -72,8 +72,10 @@
   transition: all 0.5s;
 }
 .body_box .conent .con_box .left_box .img_box {
-  height: 100%;
-  width: 100%;
+  height: 95%;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 13px;
 }
 .body_box .conent .con_box .right_box {
   height: 570px;
