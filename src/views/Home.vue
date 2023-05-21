@@ -98,6 +98,62 @@
           </div>
         </div>
       </div>
+      <!-- 振兴资讯 -->
+      <div class="informa_box">
+        <div class="title_box">
+          <router-link to="/Information" class="more">振兴资讯</router-link>
+        </div>
+        <div class="conent_box">
+          <div class="left_box">
+            <div class="cont_box">
+              <div class="img_box"></div>
+              <div class="title">
+                宁明县政协深入开展＂科教振兴 委员行动＂专项行动
+              </div>
+              <div class="time">2023-05-16</div>
+              <div class="text_box">
+                宁明县政协认真贯彻落实广西壮族自治区政协“科教振兴
+                委员行动”动员部署会精神，立足早安排、早部署、早行动，全面深入开展“科教振兴
+                委员行动”专项行动，全力助推科技振兴和教育振兴，认真服务当地经济社会高质量发展。
+                在开展“科教振兴
+                委员行动”专项行动中，宁明县政协注重采取“四大举措”，注意发挥重要阵地、重要平台、重要渠道的作用，把助力科教振兴作为围绕中心、服务大局履职尽责的重要内容，作为践行初心使命、强化责任担当的具体行动，指导辖区内市、县政协委员和相关单位、企业在助推科教振兴上建言资政，凝聚共识，贡献政协智慧和力量。
+              </div>
+              <el-tag
+                effect="plain"
+                size="medium"
+                style="color: #00ab25; border-color: #00ab25"
+                >新闻资讯</el-tag
+              >
+            </div>
+          </div>
+          <div class="right_box">
+            <div class="cont_box" v-for="item in informa" :key="item.id">
+              <div
+                class="img_box"
+                :style="{
+                  background: item.url,
+                  backgroundSize: item.backsize,
+                }"
+              ></div>
+              <div class="min_right">
+                <div class="head_box">
+                  <div class="title">{{ item.title }}</div>
+                  <div class="time">{{ item.time }}</div>
+                </div>
+                <div class="text_box">
+                  {{ item.text }}
+                </div>
+                <el-tag
+                  effect="plain"
+                  size="medium"
+                  style="color: #00ab25; border-color: #00ab25"
+                  >新闻资讯</el-tag
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -125,12 +181,13 @@ import cultureimg3 from "@/assets/img/jinshanjie.jpg";
 import cultureimg4 from "@/assets/img/nongdongjie.jpg";
 // 人才引进
 import talentimg1 from "@/assets/img/weifuan.png";
-// import talentimg2 from "@/assets/img/zhengxin.png";
-// import talentimg3 from "@/assets/img/lujiechun.png";
 import talentimg4 from "@/assets/img/qinchenghua.jpg";
 import talentimg5 from "@/assets/img/nongxingguang.jpg";
 import talentimg6 from "@/assets/img/yangqi.jpg";
-// import talentimg7 from "@/assets/img/liuyingjun.jpg";
+// 振兴资讯
+import Information2 from "@/assets/img/Information2.png";
+import Information3 from "@/assets/img/Information3.jpg";
+import Information4 from "@/assets/img/Information4.png";
 
 export default {
   name: "carrousel",
@@ -307,6 +364,33 @@ export default {
           backposi: "0% 0%",
           backcolor: "#f2f2f2",
           text: "任自治区教育厅基础教育教学指导委员会特聘专家、南宁师范大学硕士研究生导师、中国合唱协会会员、广西音乐家协会会员、广西音乐家协会合唱联盟理事。曾获2019年自治区级教学成果二等奖；主持广西教育科学规划2021年度专项课题；自治区党委统战部、自治区党委教育工委2021年度统战理论政策研究课题。指导学生个人和广西民族师范学院合唱团参加“孔雀奖”全国艺术院校声乐大赛、“红铜鼓”中国-东盟艺术教育成果展演、全区大学生艺术展演等国家级、省部级各类比赛20余项，其中获得一等奖4项、二等奖3项、三等奖5项，优秀作品奖3项，区级以上优秀指导教师2项。指导学生参加广西民族师范学院校级各类声乐大赛获一等奖9人次。指导学生举办毕业音乐会7场，师生音乐会1场。",
+        },
+      ],
+      // 振兴资讯
+      informa: [
+        {
+          id: 1,
+          url: "url(" + Information2 + ")" + " no-repeat",
+          backsize: "cover",
+          title: "【新时代文明实践】崇左市“推进移风易俗·助力乡村振兴”",
+          time: "2023-5-20",
+          text: "为大力培育和践行社会主义核心价值观，弘扬志愿精神。5月18日，2023年崇左“推进移风易俗·助力乡村振兴”新时代文明实践志愿服务活动在宁明县寨安乡那练村举办。崇左市委宣传部副部长黄锦亮，县委常委、宣传部部长王新帅，崇左市特聘专家宣讲团农积坚参加活动。黄锦亮在致辞中强调，开展移风易俗、推进乡风文明，是得民心、顺民意的惠民工程，也是为群众办实事、办好事的“减负”工程，大家要共同努力，为全面建设面向东盟开放合作的现代化南疆国门城市贡献自己的一份力量。",
+        },
+        {
+          id: 2,
+          url: "url(" + Information3 + ")" + " no-repeat",
+          backsize: "cover",
+          title: "广西：唱响“三字诀” 推动乡村产业振兴",
+          time: "2023-05-10",
+          text: "央广网南宁5月10日消息（记者黄月芬 通讯员李燕 申蓓）近年来，广西移动深刻把握乡村产业“土特产”的内涵，依托“网络+乡村振兴”模式，“专项帮扶+数智化建设”双管齐下，加快5G、云计算、大数据等新一代信息技术与农业经营管理深度融合，助力乡村产业振兴。",
+        },
+        {
+          id: 3,
+          url: "url(" + Information4 + ")" + " no-repeat",
+          backsize: "cover",
+          title: "崇左“法律明白人”千人大培训，集中“充电蓄能”助力乡村振兴",
+          time: "2023-03-04",
+          text: "“这次培训课程很丰富，既学习和掌握了更多的民法典知识和人民调解工作技巧，又对法律明白人工作有了更深的认知，对我今后开展基层工作有很大的帮助。”刚参加完乡村（社区）法律明白人培训班（崇左班）的天等县天等镇百灵村党总支部书记、主任零金奎说道。",
         },
       ],
     };

@@ -32,6 +32,11 @@
           >
         </nav>
         <nav class="router_item">
+          <router-link class="link_btn" active-class="active" to="/Information"
+            >振兴资讯</router-link
+          >
+        </nav>
+        <nav class="router_item">
           <router-link class="link_btn" active-class="active" to="/Login"
             >登录</router-link
           >

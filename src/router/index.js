@@ -6,6 +6,7 @@ import Rural from '../views/Rural_culture.vue'
 import Talent from '../views/Talent.vue'
 import Login from '../views/Login.vue'
 import Enroll from '../views/Enroll.vue'
+import Information from '../views/Information.vue'
 
 
 Vue.use(VueRouter)
@@ -38,6 +39,12 @@ const routes = [
     path: '/Talent',
     name: 'Talent',
     component: Talent
+  },
+  {
+    // 振兴资讯
+    path: '/Information',
+    name: 'Information',
+    component: Information
   },
   {
     // 登录
