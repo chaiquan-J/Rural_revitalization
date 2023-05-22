@@ -18,7 +18,12 @@
               <el-tag
                 effect="plain"
                 size="medium"
-                style="color: #00ab25; border-color: #00ab25"
+                style="
+                  color: #00ab25;
+                  border-color: #00ab25;
+                  width: 70px;
+                  text-align: center;
+                "
                 >新闻资讯</el-tag
               >
             </div>
@@ -43,7 +48,12 @@
                 <el-tag
                   effect="plain"
                   size="medium"
-                  style="color: #00ab25; border-color: #00ab25"
+                  style="
+                    color: #00ab25;
+                    border-color: #00ab25;
+                    width: 70px;
+                    text-align: center;
+                  "
                   >新闻资讯</el-tag
                 >
               </div>
@@ -63,7 +73,12 @@
               <el-tag
                 effect="plain"
                 size="medium"
-                style="color: #00ab25; border-color: #00ab25; width: 70px"
+                style="
+                  color: #00ab25;
+                  border-color: #00ab25;
+                  width: 70px;
+                  text-align: center;
+                "
                 >新闻资讯</el-tag
               >
             </div>
