@@ -296,11 +296,6 @@ export default {
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
           name: "打榔舞",
-          // url: "url(" + cultureimg1 + ")" + " no-repeat",
-          // 调整图片大小
-          // backsize: "cover",
-          // 调整图片位置
-          // backposi: "40% 0%",
         },
         {
           id: 2,
@@ -308,9 +303,6 @@ export default {
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
           name: "花朝节",
-          // url: "url(" + cultureimg2 + ")" + " no-repeat",
-          // backsize: "cover",
-          // backposi: "60% 0%",
         },
         {
           id: 3,
@@ -318,9 +310,6 @@ export default {
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
           name: "金山节",
-          // url: "url(" + cultureimg3 + ")" + " no-repeat",
-          // backsize: "cover",
-          // backposi: "40% 0%",
         },
         {
           id: 4,
@@ -328,9 +317,6 @@ export default {
           srcList: [cultureimg1, cultureimg2, cultureimg3, cultureimg4],
           fit: "cover",
           name: "侬垌节",
-          // url: "url(" + cultureimg4 + ")" + " no-repeat",
-          // backsize: "cover",
-          // backposi: "40% 0%",
         },
       ],
       // 人才引进
