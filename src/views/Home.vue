@@ -2,10 +2,6 @@
 <template>
   <div>
     <div class="body_box">
-      <!-- 返回顶部 -->
-      <!-- <el-backtop>
-        <div class="up_box">UP</div>
-      </el-backtop> -->
       <div class="swiper_box">
         <!-- 轮播图 -->
         <swiper :options="swiperOption" ref="mySwiper" class="swiper_max">
@@ -32,6 +28,7 @@
         </div>
         <div class="conent_box">
           <div class="con_box" v-for="item in developimg" :key="item.id">
+            <!-- 循环渲染图片 -->
             <div
               class="img_box"
               :style="{
@@ -40,6 +37,7 @@
                 backgroundPosition: item.backposi,
               }"
             >
+              <!-- 遮罩层 -->
               <div class="name_box">{{ item.text }}</div>
             </div>
           </div>
@@ -51,6 +49,10 @@
           <router-link to="/Rural" class="more">乡村文化</router-link>
         </div>
         <div class="conent_box">
+          <!-- interval为走马灯的类型 可选类型card -->
+          <!-- height设置走马灯高度 -->
+          <!-- trigger设置指示器的触发方式 可选值click -->
+          <!-- indicator-position设置指示器位置 可选值outside/none -->
           <el-carousel
             :interval="4000"
             type="card"
@@ -59,7 +61,9 @@
             trigger="click"
             indicator-position="outside"
           >
+            <!-- 通过循环渲染图片数组 -->
             <el-carousel-item v-for="item in cultureimg" :key="item.id">
+              <!-- preview-src-list开启大图预览同时配置大图预览的图片数组 -->
               <el-image
                 class="cul_img"
                 style="width: 100%; height: 100%"
@@ -196,7 +200,6 @@ import Information3 from "@/assets/img/Information3.jpg";
 import Information4 from "@/assets/img/Information4.png";
 
 export default {
-  name: "carrousel",
   // 数据
   data() {
     return {
@@ -226,9 +229,13 @@ export default {
       // 轮播图
       swiperSrc: [
         {
+          // 轮播图id，配置id做循环key
           id: 1,
+          // 拼接引入的图片地址
           src: "url(" + swiperimg2 + ")" + " no-repeat",
+          // 设置图片大小
           backsize: "100%",
+          // 设置图片显示偏移
           backposi: "0% 0%",
         },
         {
@@ -253,10 +260,15 @@ export default {
       // 乡村发展
       developimg: [
         {
+          // 循环key
           id: 1,
+          // 拼接图片地址
           src: "url(" + developimg2 + ")" + " no-repeat",
+          // 设置图片大小
           backsize: "cover",
+          // 设置图片位置偏移
           backposi: "center",
+          // 图片名称
           text: "产业振兴",
         },
         {

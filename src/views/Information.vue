@@ -4,6 +4,7 @@
     <div class="head_img"></div>
     <div class="informa_box">
       <div class="conent_box">
+        <!-- 热点资讯 -->
         <div class="hop_box">
           <div class="left_box">
             <div class="cont_box">
@@ -60,6 +61,7 @@
             </div>
           </div>
         </div>
+        <!-- 往期资讯 -->
         <div class="news_box">
           <div class="max_box">
             <div class="cont_box" v-for="item in news" :key="item.id">

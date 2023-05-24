@@ -61,6 +61,7 @@
 </template>
   
 <script>
+// 引入图片
 import dlw1 from "../assets/img/dlw1.jpg";
 import dlw2 from "../assets/img/dlw2.jpg";
 import dlw3 from "../assets/img/dlw3.jpg";
@@ -92,30 +93,21 @@ export default {
       conentdata: [
         {
           id: 1,
-          // imgurl: [
-          //   { id: 1, url: dlw1, fit: "cover" },
-          //   { id: 2, url: dlw2, fit: "cover" },
-          //   { id: 3, url: dlw3, fit: "cover" },
-          // ],
           url1: dlw1,
           url2: dlw2,
           fit: "cover",
-          // 点开大图 链接同上
+          // 预览大图链接
           srcList: [dlw1, dlw2, dlw3],
           title_text: "打榔舞",
           text: "   “打榔舞”是广西天等县的一种壮族舞蹈，属于广西壮族自治区级非物质文化遗产名录项目，流传于世已经有1391年的历史，\n是居住在天等地区的壮族先民在唐代武德年间至北宋靖康年间为酬谢天公地神赐予的福泽，为祝愿年年风调雨顺，岁岁国泰民安所创造的用于酬神、还愿、祭祀、娱乐等活动的民间舞。",
+          // 条件参数
           location: 1,
         },
         {
           id: 2,
-          // imgurl: [
-          //   { id: 1, url: jsj1, fit: "cover" },
-          //   { id: 2, url: jsj2, fit: "cover" },
-          //   { id: 3, url: jsj3, fit: "cover" },
-          // ],
           url1: jsj1,
           fit: "cover",
-          // 点开大图 链接同上
+          // 预览大图链接
           srcList: [jsj1, jsj2, jsj3],
           title_text: "金山节",
           text: "   “金山节”是广西崇左市江州区左州镇的一个传统节日，主要内容为祈福、抢花炮、文艺演出、百家宴。时间为每年的农历二月十九。",
@@ -123,20 +115,10 @@ export default {
         },
         {
           id: 3,
-          // imgurl: [
-          //   { id: 1, url: hsj1, fit: "cover" },
-          //   { id: 2, url: hsj2, fit: "cover" },
-          //   { id: 3, url: hsj3, fit: "cover" },
-          //   { id: 4, url: hsj4, fit: "cover" },
-          //   { id: 5, url: hsj5, fit: "cover" },
-          //   { id: 6, url: hsj6, fit: "cover" },
-          //   { id: 7, url: hsj7, fit: "cover" },
-          //   { id: 8, url: hsj8, fit: "cover" },
-          // ],
           url1: hsj1,
           url2: hsj2,
           fit: "cover",
-          // 点开大图 链接同上
+          // 预览大图链接
           srcList: [hsj1, hsj2, hsj3, hsj4, hsj5, hsj6, hsj7, hsj8],
           title_text: "花神节",
           text: "   花神节，花朝节的别称。也是传说中的“百花生日”、“花神生日”。因古时有“花王掌管人间生育”之说，故又是生殖崇拜的节日。花朝节又称 “挑菜节”。汉族传统节日。流行于东北、华北、华东、中南等地。农历二月初二举行，也有十月十二、十月十五元宵节的。节日期间，人们结伴到郊外游览赏花，称为“踏青”，姑娘们剪五色彩纸粘在花枝上，称为“赏红”。各地还有“装狮花”、“放花神灯”等风俗。在我国古代是一个十分重要的民间传统节日。",
@@ -144,15 +126,9 @@ export default {
         },
         {
           id: 4,
-          // imgurl: [
-          //   { id: 1, url: ndj1, fit: "cover" },
-          //   { id: 2, url: ndj2, fit: "cover" },
-          //   { id: 3, url: ndj3, fit: "cover" },
-          //   { id: 4, url: ndj4, fit: "cover" },
-          // ],
           url1: ndj1,
           fit: "cover",
-          // 点开大图 链接同上
+          // 预览大图链接
           srcList: [ndj1, ndj2, ndj3, ndj4],
           title_text: "侬垌节",
           text: "   “侬垌节”是金龙镇边民长衣壮特有的节日。传统的“侬垌节”有祭祀天神，祈盼上苍来年赐福，寻求风调雨顺等之意。另外，开展民间文化交流活动，青年男女利用这次机会进行情歌对唱物色对象寻配偶，在“侬垌节”上选中对象后，回家后差媒去说亲。随着历史的变迁和经济的发展，这个具有浓厚民族特色的节日，赋予了新的内容，新的含义。",
@@ -160,18 +136,10 @@ export default {
         },
         {
           id: 5,
-          // imgurl: [
-          //   { id: 1, url: sjj1, fit: "cover" },
-          //   { id: 2, url: sjj2, fit: "cover" },
-          //   { id: 3, url: sjj3, fit: "cover" },
-          //   { id: 4, url: sjj4, fit: "cover" },
-          //   { id: 5, url: sjj5, fit: "cover" },
-          //   { id: 6, url: sjj6, fit: "cover" },
-          // ],
           url1: sjj1,
           url2: sjj2,
           fit: "cover",
-          // 点开大图 链接同上
+          // 预览大图链接
           srcList: [sjj1, sjj2, sjj3, sjj4, sjj5, sjj6],
           title_text: "壮族霜降节",
           text: "   农历二十四节气（壮族霜降节）是中国少数民族地区一种特殊的民俗活动，主要流行于广西壮族地区的天等、大新、德保、靖西、那坡等县市，以及云南东部等地区，国家级非物质文化遗产之一。",

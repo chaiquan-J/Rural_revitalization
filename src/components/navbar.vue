@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="nav_bar">
-      <!-- logo -->
+      <!-- logo/网站名字 -->
       <div class="logo_box">
         <router-link class="link_btn" to="/Home">
           <span>崇左</span>
@@ -47,95 +47,12 @@
 </template>
 
 <script>
+// 暴露接口
 export default {
+  // 配置组件名字
   name: "navbar",
   methods: {},
 };
 </script>
 
-<style lang="less">
-/**
- * 主体box
- */
-.nav_bar {
-  height: 75px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /**
-  background-color: #6d0f0f;
-   * 
-   */
-  background-color: #444444;
-  font-weight: bold;
-  font-size: 20px;
-  position: relative;
-  z-index: 999;
-  /**
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999;
-   * 
-   */
-
-  /**
- * logo
- */
-  .logo_box {
-    display: flex;
-    flex-direction: row;
-    font-size: 40px;
-    font-weight: 100;
-    font-family: sjkt;
-
-    .link_btn {
-      text-decoration: none;
-      height: 100%;
-      display: block;
-      color: #ffde00ff;
-      transition: all 0.5s;
-
-      :nth-child(2) {
-        color: #00ab25;
-      }
-    }
-  }
-
-  /**
-   * 路由盒子
-   */
-  .router_box {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-    .router_item {
-      height: 100%;
-      width: 130px;
-      line-height: 75px;
-      text-align: center;
-
-      .link_btn {
-        text-decoration: none;
-        height: 100%;
-        display: block;
-        color: #00ab25;
-        transition: all 0.5s;
-      }
-
-      .active {
-        color: #fff;
-      }
-
-      :hover {
-        color: #ffde00ff;
-      }
-    }
-  }
-}
-</style>
+<style src="../assets/style/navbar.css" scoped></style>

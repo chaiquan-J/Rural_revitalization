@@ -110,6 +110,7 @@
             justify-content: space-between;
             align-items: start;
 
+            // 设置伪类，使鼠标经过时会调整透明度属性为1，将遮罩层显示出来
             .con_box:hover {
                 .name_box {
                     opacity: 1;
@@ -122,8 +123,6 @@
                 background-color: #ffffff;
                 border-radius: 10px;
                 transition: all 0.5s;
-                // box-shadow: 0px 5px 10px #000000;
-                // overflow: hidden;
 
                 .img_box {
                     height: 100%;
@@ -131,6 +130,7 @@
                     background-color: #000;
                 }
 
+                // 遮罩层样式
                 .name_box {
                     height: 100%;
                     width: 100%;
@@ -141,15 +141,12 @@
                     font-size: 40px;
                     font-weight: bold;
                     margin: 0 auto;
-                    // display: none;
+                    // 设置透明度
                     opacity: 0;
+                    // 设置过渡持续时间
                     transition: all 0.5s;
                 }
             }
-        }
-
-        .see_more {
-            margin-top: 120px;
         }
     }
 
@@ -223,6 +220,7 @@
             align-content: flex-start;
             flex-wrap: wrap;
 
+            // 通过伪类设置div阴影样式
             .con_box:hover {
                 box-shadow: 0px 10px 20px #000000;
             }
@@ -231,31 +229,26 @@
                 height: 560px;
                 width: 400px;
                 background-color: #fff;
-                // padding: 5px;
+                // 设置过渡持续时间
                 transition: all 0.5s;
-                // box-shadow: 0px 5px 10px #000000;
                 margin-bottom: 50px;
 
                 .img_box {
                     height: 435px;
                     width: 100%;
                     background-color: #000;
-                    // background: url(../img/weifuan.png) no-repeat;
                     background-repeat: no-repeat;
                     background-position: 0% 0%;
                     background-size: cover;
-                    // border-radius: 10px;
                     overflow: hidden;
                 }
 
                 .text_box {
                     height: 170px;
                     width: 100%;
-                    // background-color: #00622e;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
-                    // align-items: center;
 
                     .name_box {
                         height: auto;
@@ -266,17 +259,18 @@
                         margin-left: 20px;
                     }
 
+                    // 文字容器
                     .text_body {
                         height: 65px;
                         width: 95%;
-                        // padding: 5px;
-                        // background-color: #afa6ff;
-                        //  文本换行
+                        //  文本溢出换行
                         display: -webkit-box;
                         word-break: break-all;
                         -webkit-box-orient: vertical;
+                        // 设置行数限制，超过3行就显示省略号
                         -webkit-line-clamp: 3;
                         text-overflow: ellipsis;
+                        // 设置超出div的内容不显示
                         overflow: hidden;
                         margin: 0 auto;
                     }
@@ -290,16 +284,17 @@
         height: 1100px;
         width: 100%;
         background-color: #fff;
+        // 弹性盒子布局
         display: flex;
+        // 布局显示方向
         flex-direction: column;
-        // justify-content: flex-start;
         align-items: center;
         background-size: cover;
 
         .conent_box {
             height: 800px;
             width: 2000px;
-            // background-color: #1989fa;
+            // 弹性盒子布局
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -307,15 +302,18 @@
             .left_box {
                 height: 100%;
                 width: 50%;
-                // background-color: #b1cabe;
 
+                // 设置伪类通过鼠标触发过渡效果
                 .cont_box:hover {
+                    // 显示阴影
                     box-shadow: 0px 10px 20px #585858;
 
+                    // 图片位置向上偏移
                     .img_box {
                         background-position: 5% 5%;
                     }
 
+                    // 标题变色
                     .title {
                         color: #00ab25;
                     }
@@ -326,6 +324,7 @@
                     padding: 45px;
                     background-color: #fff;
                     border-radius: 4px;
+                    // 过渡持续时间
                     transition: all 0.5s;
 
                     .img_box {
@@ -371,7 +370,6 @@
             .right_box {
                 height: 100%;
                 width: 950px;
-                // background-color: #46d1d1;
 
                 .cont_box:hover {
                     box-shadow: 0px 0px 20px #585858;
@@ -397,7 +395,6 @@
                     background-color: #fff;
                     margin-bottom: 5px;
                     border-radius: 4px;
-                    // box-shadow: 0px 10px 20px #585858;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -406,9 +403,6 @@
                     .img_box {
                         height: 100%;
                         width: 340px;
-                        // background-color: #000;
-                        // background: url(../img/Information2.png) no-repeat;
-                        // background-size: cover;
                         overflow: hidden;
                         margin-bottom: 20px;
                         transition: all 0.5s;

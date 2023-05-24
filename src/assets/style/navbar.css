@@ -1,0 +1,56 @@
+.nav_bar {
+  height: 75px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #444444;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  z-index: 999;
+}
+.nav_bar .logo_box {
+  display: flex;
+  flex-direction: row;
+  font-size: 40px;
+  font-weight: 100;
+  font-family: sjkt;
+}
+.nav_bar .logo_box .link_btn {
+  text-decoration: none;
+  height: 100%;
+  display: block;
+  color: #ffde00ff;
+  transition: all 0.5s;
+}
+.nav_bar .logo_box .link_btn :nth-child(2) {
+  color: #00ab25;
+}
+.nav_bar .router_box {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.nav_bar .router_box .router_item {
+  height: 100%;
+  width: 130px;
+  line-height: 75px;
+  text-align: center;
+}
+.nav_bar .router_box .router_item .link_btn {
+  text-decoration: none;
+  height: 100%;
+  display: block;
+  color: #00ab25;
+  transition: all 0.5s;
+}
+.nav_bar .router_box .router_item .active {
+  color: #fff;
+}
+.nav_bar .router_box .router_item :hover {
+  color: #ffde00ff;
+}
