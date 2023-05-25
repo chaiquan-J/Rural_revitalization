@@ -17,14 +17,14 @@
 }
 
 .conent {
-    height: 415px;
+    height: auto;
     width: 500px;
     background-color: #fff;
     margin: 0 auto;
     position: relative;
     top: 245px;
     z-index: 2;
-    margin-bottom: 637px;
+    margin-bottom: 632px;
     border-radius: 5px;
     box-shadow: 0px 5px 20px #000000;
     display: flex;
@@ -44,14 +44,22 @@
     .input_box {
         height: auto;
         width: 350px;
-        // background-color: #eee;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-bottom: 30px;
+        // align-items: center;
+        margin-bottom: 20px;
 
-        .input_user {
-            margin-bottom: 30px;
+        .opacit {
+            opacity: 1 !important;
+        }
+
+        .prompt {
+            opacity: 0;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: red;
+            transition: all 0.5s;
+            font-size: 13px;
         }
     }
 
@@ -62,5 +70,6 @@
         flex-direction: row;
         justify-content: center;
         margin-top: 15px;
+        margin-bottom: 50px;
     }
 }
