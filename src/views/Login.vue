@@ -47,8 +47,10 @@
 export default {
   data() {
     return {
+      // 动态绑定数据
       username: "",
       pwsd: "",
+      // 控制提示文字显示
       nameopa: false,
       pwdoopa: false,
     };

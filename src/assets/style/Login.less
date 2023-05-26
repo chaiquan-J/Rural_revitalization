@@ -46,14 +46,15 @@
         width: 350px;
         display: flex;
         flex-direction: column;
-        // align-items: center;
         margin-bottom: 20px;
 
         .opacit {
+            // !important的作用是当前样式优先级最高
             opacity: 1 !important;
         }
 
         .prompt {
+            // opacity的作用是控制元素透明度
             opacity: 0;
             margin-top: 5px;
             margin-bottom: 5px;

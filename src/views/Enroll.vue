@@ -12,6 +12,7 @@
         ></el-input>
         <p class="prompt" :class="{ opacit: useropa }">{{ usertext }}</p>
         <el-input
+          type="email"
           placeholder="请输入邮箱"
           v-model="email"
           class="input_user"
@@ -24,19 +25,24 @@
           show-word-limit
           class="input_user"
           @blur="phoneempty"
+          v-model="phone"
         ></el-input>
         <p class="prompt" :class="{ opacit: phonopa }">{{ phonetext }}</p>
         <el-input
+          type="password"
           show-password
           placeholder="请输入密码"
           class="input_user"
           @blur="pwdempty"
+          v-model="pwd"
         ></el-input>
         <p class="prompt" :class="{ opacit: pwdopa }">{{ pwdtext }}</p>
         <el-input
+          type="password"
           show-password
           placeholder="请再次输入密码"
           @blur="pswdempty"
+          v-model="pswd"
         ></el-input>
         <p class="prompt" :class="{ opacit: pswdopa }">{{ pswdtext }}</p>
       </div>
@@ -58,21 +64,24 @@
 export default {
   data() {
     return {
+      // 动态绑定数据
       username: "",
-      usertext: "用户名不能为空！",
-      useropa: false,
+      email: "",
+      phone: "",
       pwd: "",
       pswd: "",
+      // 提示文字
+      usertext: "用户名不能为空！",
+      emailtext: "请输入邮箱！",
+      phonetext: "请输入手机号！",
       pwdtext: "密码不能为空！",
       pswdtext: "请再次输入密码！",
+      // 控制提示文字出现
+      useropa: false,
+      emailopa: false,
+      phonopa: false,
       pwdopa: false,
       pswdopa: false,
-      email: "",
-      emailtext: "请输入邮箱！",
-      emailopa: false,
-      phone: "",
-      phonetext: "请输入手机号！",
-      phonopa: false,
     };
   },
   methods: {
@@ -131,7 +140,7 @@ export default {
       }
     },
     pwdempty() {
-      var pwdz = /^[a-zA-Z]\w{5,17}$/;
+      var pwdz = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
       if (this.$data.pwd == "") {
         this.$data.pwdopa = true;
         this.$data.pwdtext = "请输入密码！";
@@ -141,8 +150,7 @@ export default {
         return true;
       } else {
         this.$data.pwdopa = true;
-        this.$data.pwdtext =
-          "密码以字母开头，只能包含字母、数字和下划线，6-18字符。";
+        this.$data.pwdtext = "密码以字母开头,只包含字母和数字,最少8字符。";
         return false;
       }
     },
@@ -162,8 +170,8 @@ export default {
     },
     // 注册按钮点击事件
     gologin() {
-      // 通过与或非的与判断，全部返回值为true才能跳转到登陆页
-      // 如果有一个为flase就重复调用事件提示
+      // 通过与或非的与判断，调用所有的验证事件时全部返回值为true才能跳转到登陆页
+      // 如果有一个为flase就重复调用验证事件唤起提示文字
       if (
         this.userempty() &&
         this.emailempty() &&
@@ -171,6 +179,7 @@ export default {
         this.pwdempty() &&
         this.pswdempty()
       ) {
+        // 跳转至登陆栏目
         this.$router.push("/Login");
       } else {
         this.userempty();
